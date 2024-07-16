@@ -52,7 +52,7 @@ Shader "Unlit/BlackLight"
             {
                 fixed4 col = tex2D(_MainTex, i.uv); //メインテクスチャから色をサンプリング(_MainTexから指定したUV座標i.uvに対応する色情報を取得) //pow()は直線を曲線に変換するときに使う
                 float distanceXY = distance(float2(i.worldPos.x, i.worldPos.y), float2(_Center.x, _Center.y));
-                float heightDifference = i.worldPos.z - _Center.z;
+                float heightDifference = _Center.z-i.worldPos.z;
                 float coneRadiusAtHeight = _Radius * (1.0 - heightDifference / _Height);
                 float v = (distanceXY <= coneRadiusAtHeight&&heightDifference>=0&&heightDifference<=_Height) ? 1 : -1;
                 clip(v);
