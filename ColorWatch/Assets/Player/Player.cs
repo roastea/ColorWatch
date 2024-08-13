@@ -5,12 +5,21 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float playerspeed = 1;
+    [SerializeField] private float playerspeed = 3;
+    [SerializeField] private float lookspeed = 0.8f;
+    [SerializeField] private float maxAngleX = 80; //上を向く限界の角度
+    [SerializeField] private float minAngleX = -90; //下を向く限界の角度
 
     private Rigidbody rb;
+
     private bool moving;
+    private bool looking;
+
     private Vector2 moveVector;
+    private Vector2 lookVector;
+
     private Vector3 playermove;
+    private Vector3 playerlook;
 
     void Start()
     {
@@ -31,8 +40,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void OnLook(InputAction.CallbackContext context)
+    {
+        lookVector = context.ReadValue<Vector2>();
+
+        if (context.started)
+        {
+            looking = true;
+        }
+        else if (context.canceled)
+        {
+            looking = false;
+        }
+    }
+
     void Update()
     {
+        //プレイヤーの移動
         if (moving)
         {
             playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed;
@@ -42,12 +66,43 @@ public class Player : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
-    }
 
-    /*
-    void FixedUpdate()
-    {
-        rb.velocity = playermove * playerspeed;
+        //プレイヤーの視点
+        if (looking)
+        {
+            //上下の視点移動
+            if (playerlook.x > maxAngleX)
+            {
+                if (lookVector.y > 0)
+                {
+                    playerlook.x -= lookVector.y * lookspeed;
+                }
+            }
+            else if (playerlook.x < minAngleX)
+            {
+                if (lookVector.y < 0)
+                {
+                    playerlook.x -= lookVector.y * lookspeed;
+                }
+            }
+            else
+            {
+                playerlook.x -= lookVector.y * lookspeed;
+            }
+
+            //左右の視点移動
+            if (playerlook.y >= 360)
+            {
+                playerlook.y = playerlook.y - 360;
+            }
+            else if (playerlook.y < 0)
+            {
+                playerlook.y = 360 - playerlook.y;
+            }
+
+            playerlook.y += lookVector.x * lookspeed;
+
+            Camera.main.transform.localRotation = Quaternion.Euler(playerlook);
+        }
     }
-    */
 }
