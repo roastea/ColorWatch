@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
         if (moving)
         {
             playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed;
-            rb.AddForce(playermove);
+            rb.AddRelativeForce(playermove);
         }
         else
         {
@@ -102,7 +102,9 @@ public class Player : MonoBehaviour
 
             playerlook.y += lookVector.x * lookspeed;
 
-            Camera.main.transform.localRotation = Quaternion.Euler(playerlook);
+            //Camera.main.transform.localRotation = Quaternion.Euler(playerlook);
+            transform.rotation = Quaternion.Euler(playerlook);
+
         }
     }
 }
