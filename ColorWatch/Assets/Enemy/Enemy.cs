@@ -17,9 +17,14 @@ public class Enemy : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Debug.Log("touch!");
+            Debug.Log("life -1");
             life--;
             lifeCount.SetText("Life : {0}", life);
+        }
+        if(other.CompareTag("LightPillar"))
+        {
+            Debug.Log("Enemy is dead.");
+            Destroy(this.gameObject);
         }
     }
 }
