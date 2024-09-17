@@ -6,11 +6,14 @@ using TMPro;
 public class Enemy : MonoBehaviour
 {
     public TextMeshProUGUI lifeCount;
+    public TextMeshProUGUI killCount;
     public int life;
+    public int kill;
 
     private void Start()
     {
         life = 3;
+        kill = 0;
     }
 
     void OnTriggerEnter(Collider other)
@@ -25,6 +28,8 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("Enemy is dead.");
             Destroy(this.gameObject);
+            kill++;
+            killCount.SetText("Enemy : {0} / 15", kill);
         }
     }
 }
