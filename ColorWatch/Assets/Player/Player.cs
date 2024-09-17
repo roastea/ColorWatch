@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float playerspeed = 3;
     [SerializeField] private float lookspeed = 0.8f;
-    [SerializeField] private float maxAngleX = 80; //ã‚ðŒü‚­ŒÀŠE‚ÌŠp“x
-    [SerializeField] private float minAngleX = -90; //‰º‚ðŒü‚­ŒÀŠE‚ÌŠp“x
+    [SerializeField] private float maxAngleX = 80; //‰º‚ðŒü‚­ŒÀŠE‚ÌŠp“x
+    [SerializeField] private float minAngleX = -90; //ã‚ðŒü‚­ŒÀŠE‚ÌŠp“x
 
     private Rigidbody rb;
 
@@ -90,6 +90,8 @@ public class Player : MonoBehaviour
                 playerlook.x -= lookVector.y * lookspeed;
             }
 
+            Camera.main.transform.localRotation = Quaternion.Euler(playerlook.x, 0, 0);
+
             //¶‰E‚ÌŽ‹“_ˆÚ“®
             if (playerlook.y >= 360)
             {
@@ -103,7 +105,8 @@ public class Player : MonoBehaviour
             playerlook.y += lookVector.x * lookspeed;
 
             //Camera.main.transform.localRotation = Quaternion.Euler(playerlook);
-            transform.rotation = Quaternion.Euler(playerlook);
+            transform.rotation = Quaternion.Euler(0, playerlook.y, 0);
+            
 
         }
     }
