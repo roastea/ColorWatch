@@ -254,7 +254,7 @@ Transform:
   m_GameObject: {fileID: 308339393}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1546,7 +1546,7 @@ Transform:
   m_GameObject: {fileID: 1831016439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.6, y: 1, z: -2.46}
+  m_LocalPosition: {x: 13.6, y: 1, z: 0.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1853,12 +1853,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1909042628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53afce6cbc069e6419e214d5fc860bd2, type: 3}
+  m_Script: {fileID: 11500000, guid: f1a72b6f7061f67468332aaa955c8760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerObject: {fileID: 308339394}
-  radius: 7
-  height: 30
+  player: {fileID: 1831016443}
+  judge: {fileID: 308339394}
+  maxAngle: 20
 --- !u!1 &2146355846
 GameObject:
   m_ObjectHideFlags: 0
