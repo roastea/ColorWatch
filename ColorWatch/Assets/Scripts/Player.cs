@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private Vector3 playermove;
     private Vector3 playerlook;
 
+    public Vector3 playerPosition;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -109,5 +111,8 @@ public class Player : MonoBehaviour
             
 
         }
+
+        playerPosition = Vector3.forward;
+        //Debug.Log(playerPosition);
     }
 }

@@ -122,7 +122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeCount: {fileID: 0}
+  killCount: {fileID: 0}
   life: 0
+  kill: 0
 --- !u!54 &4042101582157617385
 Rigidbody:
   m_ObjectHideFlags: 0
