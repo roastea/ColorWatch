@@ -92,7 +92,8 @@ public class Player : MonoBehaviour
                 playerlook.x -= lookVector.y * lookspeed;
             }
 
-            Camera.main.transform.localRotation = Quaternion.Euler(playerlook.x, 0, 0);
+            //Camera.main.transform.localRotation = Quaternion.Euler(playerlook.x, 0, 0);
+            //transform.rotation = Quaternion.Euler(playerlook.x, 0, 0);
 
             //¶‰E‚ÌŽ‹“_ˆÚ“®
             if (playerlook.y >= 360)
@@ -107,7 +108,7 @@ public class Player : MonoBehaviour
             playerlook.y += lookVector.x * lookspeed;
 
             //Camera.main.transform.localRotation = Quaternion.Euler(playerlook);
-            transform.rotation = Quaternion.Euler(0, playerlook.y, 0);
+            transform.rotation = Quaternion.Euler(playerlook);
             
 
         }
