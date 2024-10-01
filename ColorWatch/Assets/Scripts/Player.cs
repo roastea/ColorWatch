@@ -93,7 +93,6 @@ public class Player : MonoBehaviour
             }
 
             //Camera.main.transform.localRotation = Quaternion.Euler(playerlook.x, 0, 0);
-            //transform.rotation = Quaternion.Euler(playerlook.x, 0, 0);
 
             //¶‰E‚ÌŽ‹“_ˆÚ“®
             if (playerlook.y >= 360)
