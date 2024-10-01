@@ -2,64 +2,83 @@ Shader "Unlit/BlackLight"
 {
     Properties
     {
-        [NoScaleOffset] _MainTex ("Texture", 2D) = "red" {} //ベーステクスチャ
-        _Center("Center",Vector) = (0,0,0,0) //中心座標
-        _Radius("Radius",float) = 20 //球体部分の半径
-        _Height("Height",float) = 100 //球体部分+円柱部分の高さ
+        [NoScaleOffset] _MainTex("Texture", 2D) = "red" {}
+        _Position("Position",Vector) = (0,0,0) //プレイヤー座標
+        _Judge("Judge",Vector) = (0,0,0) //Judgeの座標
+        _MaxAngle("MaxAngle",float) = 20 //最大角度
     }
         SubShader
         {
-            Tags { "RenderType" = "Opaque" } //レンダリングタイプ = 不透明(透明はTransparentでガラスとかに使う)
+            Tags
+            {
+                "RenderType" = "Opaque"
+            }
 
             Pass
             {
                 CGPROGRAM
-
                 #pragma vertex vert
                 #pragma fragment frag
 
-                #include "UnityCG.cginc" //ここまで宣言
+                #include "UnityCG.cginc"
 
-                float _Radius; //プロパティから設定された情報を保持するために使用
-                float4 _Center;
-                float _Height;
+                float _Radius;
+                float3 _Judge;
+                float3 _Position;
+                float _MaxAngle;
 
-                sampler2D _MainTex; //プロパティで定義されたメインテクスチャを格納する変数
+                sampler2D _MainTex;
 
-            struct appdata //頂点情報を格納する構造体の宣言
-            {
-                float4 vertex : POSITION; //頂点の3D座標情報
-                float2 uv : TEXCOORD0; //テクスチャのUV座標情報(テクスチャの座標変換に使用)
-            };
+                struct appdata
+                {
+                    float4 vertex : POSITION;
+                    float2 uv : TEXCOORD0;
+                };
 
-            struct v2f //頂点シェーダーからフラグメントシェーダーへのデータ渡し
-            {
-                float4 pos : SV_POSITION; //頂点のスクリーン座標
-                float3 worldPos : TEXCOORD1; //頂点の法線ベクトルをワールド空間に変換
-                float2 uv : TEXCOORD0; //テクスチャのUV座標情報
-            };
+                struct v2f
+                {
+                    float4 pos : SV_POSITION;
+                    float3 worldPos : TEXCOORD1;
+                    float2 uv : TEXCOORD0;
+                };
 
-            v2f vert (appdata v) //頂点シェーダー関数の宣言(appdata構造体を受け取り、v2f構造体を返す)
-            {
-                v2f o;
-                o.pos = UnityObjectToClipPos(v.vertex); //頂点位置をクリップ空間に変換(※クリップ空間:最終的にスクリーン上でどの位置に描画されるか決定される)
-                o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz; //光の反射や陰影の計算に使用される(?)
-                o.uv = v.uv; //テクスチャをオブジェクトに正しくマッピングさせる
-                return o;
+                v2f vert(appdata v)
+                {
+                    v2f o;
+                    o.pos = UnityObjectToClipPos(v.vertex);
+                    o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                    o.uv = v.uv;
+                    return o;
+                }
+
+                fixed4 frag(v2f i) : SV_Target
+                {
+                    fixed4 col = tex2D(_MainTex, i.uv);
+
+                    float3 lightVector = _Judge - _Position; //プレイヤーからJudgeへのベクトル
+                    float3 touchVector = i.worldPos - _Position; //プレイヤーから描画ピクセルへのベクトル
+
+                    //それぞれのベクトルの長さを計算
+                    float lengthA = length(lightVector);
+                    float lengthB = length(touchVector);
+
+                    float dotProduct = dot(lightVector, touchVector); //ベクトルの内積を計算
+                    float rad = acos(dotProduct / (lengthA * lengthB)); //内積からベクトルの間の角度を計算(ラジアン)
+
+                    float angle = degrees(rad); //ラジアン→度に変換
+
+                    float threshold_angle = _MaxAngle - angle; //最大角度から現在の描画ピクセルの角度を引く(最大を超えるとマイナスになる)
+                    float threshold_length = lengthA - lengthB; //ジャッジまでのベクトルの長さから描画ピクセルまでのベクトル長さを引く(Judgeの場所を超えるとマイナスになる)
+
+                    //両方のしきい値が0を超えてたら(範囲に収まっていたら)1を返す
+                    float v = threshold_angle >= 0 && threshold_length >= 0 ? 1 : -1;
+
+                    //0以上だったらマスクする
+                    clip(v);
+
+                    return col;
+                }
+                ENDCG
             }
-
-            fixed4 frag (v2f i) : SV_Target //フラグメントシェーダー関数の宣言(v2f構造体を受け取り、fixed4型を返す)
-            {
-                fixed4 col = tex2D(_MainTex, i.uv); //メインテクスチャから色をサンプリング(_MainTexから指定したUV座標i.uvに対応する色情報を取得) //pow()は直線を曲線に変換するときに使う
-                float distanceXY = distance(float2(i.worldPos.x, i.worldPos.y), float2(_Center.x, _Center.y));
-                float heightDifference = _Center.z-i.worldPos.z;
-                float coneRadiusAtHeight = _Radius * (1.0 - heightDifference / _Height);
-                float v = (distanceXY <= coneRadiusAtHeight&&heightDifference>=0&&heightDifference<=_Height) ? 1 : -1;
-                clip(v);
-
-                return col;
-            }
-            ENDCG
         }
-    }
 }
