@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class BlackLightScript : MonoBehaviour
 {
-    public Transform centerObject;
-    public float radius = 7f;
-    public float height = 30f;
+    public Transform judge;
+    public Transform player;
+    public float maxAngle = 25f;
+    //public float radius = 7f;
+    //public float height = 30f;
 
     // Update is called once per frame
     void Update()
     {
-        if(centerObject!=null)
+        if(judge!=null)
         {
             Renderer[] renderers = FindObjectsOfType<Renderer>();
             foreach(Renderer renderer in renderers)
@@ -20,11 +22,13 @@ public class BlackLightScript : MonoBehaviour
                 {
                     if(material.shader.name=="Unlit/BlackLight")
                     {
-                        material.SetVector("_Center", new Vector4(centerObject.position.x, centerObject.position.y, centerObject.position.z, 0));
+                        material.SetVector("_Judge", new Vector4(judge.position.x, judge.position.y, judge.position.z, 0));
 
-                        material.SetFloat("_Radius", radius);
+                        material.SetVector("_Position", new Vector4(player.position.x, player.position.y, player.position.z, 0));
 
-                        material.SetFloat("_Height", height);
+                        material.SetFloat("_MaxAngle", maxAngle);
+
+                        //material.SetFloat("_Height", height);
                     }
                 }
             }
