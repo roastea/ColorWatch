@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -59,6 +61,12 @@ public class Enemy : MonoBehaviour
             {
                 GotoNextPoint();
             }
+        }
+
+        //‘Ì—Í‚ªƒ[ƒ‚É‚È‚Á‚½‚ç
+        if (life <= 0)
+        {
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 
