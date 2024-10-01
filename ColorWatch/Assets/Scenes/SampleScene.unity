@@ -1989,9 +1989,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3013682389292219584, guid: 97158d3132c675243b7dcfe6ce126174, type: 3}
+      propertyPath: m_g
+      value: 
+      objectReference: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
+    - target: {fileID: 3013682389292219584, guid: 97158d3132c675243b7dcfe6ce126174, type: 3}
       propertyPath: m_p
       value: 
       objectReference: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
+    - target: {fileID: 3013682389292219584, guid: 97158d3132c675243b7dcfe6ce126174, type: 3}
+      propertyPath: obj_g
+      value: 
+      objectReference: {fileID: 721091077}
     - target: {fileID: 3013682389292219584, guid: 97158d3132c675243b7dcfe6ce126174, type: 3}
       propertyPath: obj_p
       value: 
