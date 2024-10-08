@@ -2,7 +2,7 @@ Shader "Unlit/BlackLight"
 {
     Properties
     {
-        [NoScaleOffset] _MainTex("Texture", 2D) = "red" {}
+        [NoScaleOffset] _MainTex("Texture", 2D) = "white" {}
         _Position("Position",Vector) = (0,0,0) //プレイヤー座標
         _Judge("Judge",Vector) = (0,0,0) //Judgeの座標
         _MaxAngle("MaxAngle",float) = 25 //最大角度
