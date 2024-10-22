@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxAngleX = 80; //‰º‚ðŒü‚­ŒÀŠE‚ÌŠp“x
     [SerializeField] private float minAngleX = -90; //ã‚ðŒü‚­ŒÀŠE‚ÌŠp“x
     [SerializeField] private float maxStamina = 100f; //ƒXƒ^ƒ~ƒi‚ÌÅ‘å’l
+    [SerializeField] private float limitMove = 10; //•à‚­‘¬‚³‚ÌãŒÀ
+    [SerializeField] private float limitDash = 15; //‘–‚é‘¬‚³‚ÌãŒÀ
 
     private Rigidbody rb;
 
@@ -92,11 +94,22 @@ public class Player : MonoBehaviour
 
                 nowStamina -= 0.1f;
                 staminaSlider.value = nowStamina;
+
+                if (rb.velocity.magnitude > limitDash)
+                {
+                    rb.velocity = rb.velocity.normalized * limitDash;
+                }
             }
             else //’ÊíŽž
             {
                 playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed;
                 rb.AddRelativeForce(playermove);
+
+                //‰Á‘¬‚µ‚·‚¬‚È‚¢‚æ‚¤‚É§ŒÀ
+                if (rb.velocity.magnitude > limitMove)
+                {
+                    rb.velocity = rb.velocity.normalized * limitMove;
+                }
             }
         }
         else
