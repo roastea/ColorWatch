@@ -6,7 +6,7 @@ using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
-public class EnemyNormal : MonoBehaviour
+public class EnemyShy : MonoBehaviour
 {
     //EnemyPatrol
     [SerializeField] Transform player;

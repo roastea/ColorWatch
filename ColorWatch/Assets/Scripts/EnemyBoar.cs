@@ -12,7 +12,7 @@ public class EnemyBoar : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float detectDistance;
     public Transform[] points;
-    private int destPoint = 0;
+    //private int destPoint = 0;
     NavMeshAgent agent;
     //bool IsDetected = false;
 

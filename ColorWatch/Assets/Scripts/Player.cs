@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private float playerspeed = 3;
+    [SerializeField] private float dashspeed = 1.3f;
     [SerializeField] private float lookspeed = 0.8f;
     [SerializeField] private float maxAngleX = 80; //下を向く限界の角度
     [SerializeField] private float minAngleX = -90; //上を向く限界の角度
+    [SerializeField] private float maxStamina = 100f; //スタミナの最大値
 
     private Rigidbody rb;
 
+    private float nowStamina;
+
     private bool moving;
     private bool looking;
+    private bool running;
 
     private Vector2 moveVector;
     private Vector2 lookVector;
@@ -21,9 +27,16 @@ public class Player : MonoBehaviour
     private Vector3 playermove;
     private Vector3 playerlook;
 
+    public GameObject staminaGauge;
+    private Slider staminaSlider;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        staminaSlider = staminaGauge.GetComponent<Slider>();
+        staminaSlider.maxValue = maxStamina;
+        nowStamina = maxStamina;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -54,17 +67,48 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            running = true;
+        }
+        else if (context.canceled)
+        {
+            running = false;
+        }
+
+    }
+
     void Update()
     {
         //プレイヤーの移動
         if (moving)
         {
-            playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed;
-            rb.AddRelativeForce(playermove);
+            if (running) //ダッシュ時
+            {
+                playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed * dashspeed;
+                rb.AddRelativeForce(playermove);
+
+                nowStamina -= 0.1f;
+                staminaSlider.value = nowStamina;
+            }
+            else //通常時
+            {
+                playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed;
+                rb.AddRelativeForce(playermove);
+            }
         }
         else
         {
             rb.velocity = Vector3.zero;
+        }
+
+        //スタミナの回復
+        if (nowStamina < staminaSlider.maxValue && !running)
+        {
+            nowStamina += 0.15f;
+            staminaSlider.value = nowStamina;
         }
 
         //プレイヤーの視点
