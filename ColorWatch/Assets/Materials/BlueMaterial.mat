@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "\u30BF\u30A4\u30EB"
+  m_Name: BlueMaterial
   m_Shader: {fileID: 4800000, guid: bba07ab32dea8fc408ad85d3b431586f, type: 3}
-  m_Parent: {fileID: 2100000, guid: a40abce24746ca242b0e1868a1318614, type: 2}
+  m_Parent: {fileID: 2100000, guid: 147d31fd4722a7c4985b167a7113b9f5, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -22,7 +22,11 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 44cced520ecfd9f4292979a4fe8268c4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats: []
     m_Colors: []

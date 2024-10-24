@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    //CharacterController controller;
+    //Vector3 moveDirection;
+    float gravity = 0.98f;
     [SerializeField] private float playerspeed = 5;
     [SerializeField] private float lookspeed = 0.8f;
     [SerializeField] private float maxAngleX = 80; //下を向く限界の角度
@@ -26,6 +29,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        //controller = GetComponent("CharacterController") as CharacterController;
         rb = GetComponent<Rigidbody>();
         life = 3;
     }
@@ -60,10 +64,20 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //地面に足がついているか
+        //if(controller.isGrounded)
+        //{
+        //    moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //    moveDirection = transform.TransformDirection(moveDirection);
+        //    moveDirection *= playerspeed;
+        //}
+        playermove.y -= gravity * Time.deltaTime; //重力
+        //controller.Move(playermove * Time.deltaTime); //移動
+
         //プレイヤーの移動
         if (moving)
         {
-            playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed;
+            playermove = new Vector3(moveVector.x, playermove.y, moveVector.y) * playerspeed;
             rb.AddRelativeForce(playermove);
         }
         else
