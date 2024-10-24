@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float playerspeed = 3;
+    [SerializeField] private float playerspeed = 5;
     [SerializeField] private float lookspeed = 0.8f;
     [SerializeField] private float maxAngleX = 80; //‰º‚ğŒü‚­ŒÀŠE‚ÌŠp“x
     [SerializeField] private float minAngleX = -90; //ã‚ğŒü‚­ŒÀŠE‚ÌŠp“x
+    public GameObject[] lifeArray = new GameObject[3];
+    public int life;
 
     private Rigidbody rb;
 
@@ -24,6 +27,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        life = 3;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -34,7 +38,7 @@ public class Player : MonoBehaviour
         {
             moving = true;
         }
-        else if(context.canceled)
+        else if (context.canceled)
         {
             moving = false;
         }
@@ -107,5 +111,29 @@ public class Player : MonoBehaviour
             //Camera.main.transform.localRotation = Quaternion.Euler(playerlook);
             transform.rotation = Quaternion.Euler(playerlook);
         }
+
+        //‘Ì—Í‚ªƒ[ƒ‚É‚È‚Á‚½‚ç
+        if (life <= 0)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            life--;
+            lifeArray[life].SetActive(false);
+            StartCoroutine("SpeedUp");
+        }
+    }
+
+    IEnumerator SpeedUp()
+    {
+        playerspeed = 10;
+        yield return new WaitForSeconds(3.0f);
+        playerspeed = 5;
     }
 }
+

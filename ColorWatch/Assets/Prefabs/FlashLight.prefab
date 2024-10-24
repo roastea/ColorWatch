@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768680664368417536}
   - component: {fileID: 8029920696620474204}
+  - component: {fileID: 6308642981724706686}
   m_Layer: 0
   m_Name: FlashLight
   m_TagString: Untagged
@@ -94,3 +95,18 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &6308642981724706686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190010784010396159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53afce6cbc069e6419e214d5fc860bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  judge: {fileID: 0}
+  player: {fileID: 0}
+  maxAngle: 25

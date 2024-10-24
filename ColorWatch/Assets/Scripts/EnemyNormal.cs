@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
 using UnityEditor.SearchService;
-using UnityEngine.SceneManagement;
 
 public class EnemyNormal : MonoBehaviour
 {
@@ -16,10 +15,8 @@ public class EnemyNormal : MonoBehaviour
     NavMeshAgent agent;
     bool IsDetected = false;
 
-    //Count(life & kill)
-    public TextMeshProUGUI lifeCount;
+    //Count(killed)
     public TextMeshProUGUI killCount;
-    public int life;
     public int kill;
 
     //Color
@@ -29,7 +26,6 @@ public class EnemyNormal : MonoBehaviour
 
     private void Start()
     {
-        life = 3;
         kill = 0;
 
         agent = GetComponent<NavMeshAgent>();
@@ -62,12 +58,6 @@ public class EnemyNormal : MonoBehaviour
                 GotoNextPoint();
             }
         }
-
-        //ëÃóÕÇ™É[ÉçÇ…Ç»Ç¡ÇΩÇÁ
-        if (life <= 0)
-        {
-            SceneManager.LoadScene("GameOverScene");
-        }
     }
 
     void GotoNextPoint()
@@ -84,11 +74,6 @@ public class EnemyNormal : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
-        {
-            life--;
-            lifeCount.SetText("Life : {0}", life);
-        }
         if(other.CompareTag("LightPillar"))
         {
             Destroy(this.gameObject);
