@@ -3,36 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
-public class EnemyBoar : MonoBehaviour
+public class EnemyShy : MonoBehaviour
 {
-    EnemyNormal en;
-
     //EnemyPatrol
     [SerializeField] Transform player;
     [SerializeField] float detectDistance;
     public Transform[] points;
-    //private int destPoint = 0;
+    private int destPoint = 0;
     NavMeshAgent agent;
     bool IsDetected = false;
+
+    //Count(life & kill)
+    public TextMeshProUGUI lifeCount;
+    public TextMeshProUGUI killCount;
+    public int life;
+    public int kill;
 
     //Color
     //[SerializeField] GameObject obj;
     //[SerializeField] Material m;
-    //int boar = 0;
+    //int normal = 0;
 
     private void Start()
     {
+        life = 3;
+        kill = 0;
+
         agent = GetComponent<NavMeshAgent>();
-
         GotoNextPoint();
-
-        Rigidbody rb = this.transform.GetComponent<Rigidbody>();
-        
-        //if (target.x < this.transform.position.x)
-        //{
-        //    transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-        //}
     }
 
     private void Update()
@@ -53,7 +54,6 @@ public class EnemyBoar : MonoBehaviour
         if (IsDetected)
         {
             agent.destination = player.position;
-            //transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.x, transform.position.y), speed * Time.deltaTime);
         }
         else
         {
@@ -61,6 +61,12 @@ public class EnemyBoar : MonoBehaviour
             {
                 GotoNextPoint();
             }
+        }
+
+        //体力がゼロになったら
+        if (life <= 0)
+        {
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 
@@ -78,18 +84,21 @@ public class EnemyBoar : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //Target = GameObject.Find("Player").transform.position;
-        //if (other.CompareTag("LightPillar"))
+        //if(other.CompareTag("Player"))
+        //{
+        //    life--;
+        //    lifeCount.SetText("Life : {0}", life);
+        //}
+        //if(other.CompareTag("LightPillar"))
         //{
         //    Destroy(this.gameObject);
-        //    en.kill++;
-        //    en.killCount.SetText("Enemy : {0} / 15", en.kill);
-        //    if (other.gameObject.name == "LightPillarBoar")
+        //    kill++;
+        //    killCount.SetText("Enemy : {0} / 15", kill);
+        //    if(other.gameObject.name=="LightPillarNormal")
         //    {
-        //        boar++;
-        //        if (boar == 4)
-        //        {
-        //            GameObject gOb        //        j = GameObject.Find("LightPillarBoar");
+        //        normal++;
+        //        if(normal == 4){
+        //            GameObject gObj = GameObject.Find("LightPillarNormal");
         //            Destroy(gObj);
         //            obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
         //        }
