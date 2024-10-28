@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxStamina = 100f; //スタミナの最大値
     [SerializeField] private float limitMove = 10; //歩く速さの上限
     [SerializeField] private float limitDash = 15; //走る速さの上限
+    public GameObject[] lifeArray = new GameObject[3];
+    public int life;
 
     private Rigidbody rb;
 
@@ -39,6 +42,8 @@ public class Player : MonoBehaviour
         staminaSlider = staminaGauge.GetComponent<Slider>();
         staminaSlider.maxValue = maxStamina;
         nowStamina = maxStamina;
+
+        life = 3;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -164,5 +169,26 @@ public class Player : MonoBehaviour
             //Camera.main.transform.localRotation = Quaternion.Euler(playerlook);
             transform.rotation = Quaternion.Euler(playerlook);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            life--;
+            lifeArray[life].SetActive(false);
+            if (life <= 0)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
+            StartCoroutine("SpeedUp");
+        }
+    }
+
+    IEnumerator SpeedUp()
+    {
+        playerspeed = 10;
+        yield return new WaitForSeconds(3.0f);
+        playerspeed = 5;
     }
 }

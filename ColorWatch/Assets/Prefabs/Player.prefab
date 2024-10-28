@@ -274,7 +274,19 @@ MonoBehaviour:
     m_ActionId: 7b163ac9-9f0e-4b56-9f9c-4b3d2568ff32
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BlackLightScript, Assembly-CSharp
+        m_MethodName: OnLight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 984c1019-885b-4e50-85c6-1543aad673bc
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -317,6 +329,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 8333535a-1690-470f-81a6-7ad5f764adea
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5600939376070013208}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6354ce10-0a26-44a7-809a-8b792492f607
+    m_ActionName: Player/Dash[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -334,14 +362,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dca4e79de4e9b14881847fb2f1078ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookspeed: 0.8
+  playerspeed: 10
+  dashspeed: 1.3
+  lookspeed: 1
   maxAngleX: 50
   minAngleX: -50
-  lifeArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  life: 0
+  maxStamina: 100
+  limitMove: 10
+  limitDash: 15
+  staminaGauge: {fileID: 0}
 --- !u!54 &4442536687196867261
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -411,7 +440,7 @@ Camera:
   m_GameObject: {fileID: 5756883602117777847}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2

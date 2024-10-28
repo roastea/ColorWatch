@@ -12,14 +12,14 @@ public class EnemyBoar : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float detectDistance;
     public Transform[] points;
-    //private int destPoint = 0;
+    private int destPoint = 0;
     NavMeshAgent agent;
     bool IsDetected = false;
 
     //Color
-    //[SerializeField] GameObject obj;
-    //[SerializeField] Material m;
-    //int boar = 0;
+    [SerializeField] GameObject obj;
+    [SerializeField] Material m;
+    int boar = 0;
 
     private void Start()
     {
@@ -28,11 +28,6 @@ public class EnemyBoar : MonoBehaviour
         GotoNextPoint();
 
         Rigidbody rb = this.transform.GetComponent<Rigidbody>();
-        
-        //if (target.x < this.transform.position.x)
-        //{
-        //    transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-        //}
     }
 
     private void Update()
@@ -64,7 +59,7 @@ public class EnemyBoar : MonoBehaviour
         }
     }
 
-    void GotoNextPoint()
+    public void GotoNextPoint()
     {
         if (points.Length == 0)
         {
@@ -79,21 +74,21 @@ public class EnemyBoar : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         //Target = GameObject.Find("Player").transform.position;
-        //if (other.CompareTag("LightPillar"))
-        //{
-        //    Destroy(this.gameObject);
-        //    en.kill++;
-        //    en.killCount.SetText("Enemy : {0} / 15", en.kill);
-        //    if (other.gameObject.name == "LightPillarBoar")
-        //    {
-        //        boar++;
-        //        if (boar == 4)
-        //        {
-        //            GameObject gOb        //        j = GameObject.Find("LightPillarBoar");
-        //            Destroy(gObj);
-        //            obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
-        //        }
-        //    }
-        //}
+        if (other.CompareTag("LightPillar"))
+        {
+            Destroy(this.gameObject);
+            en.kill++;
+            en.killCount.SetText("Enemy : {0} / 15", en.kill);
+            if (other.gameObject.name == "LightPillarBoar")
+            {
+                boar++;
+                if (boar == 4)
+                {
+                    GameObject gObj = GameObject.Find("LightPillarBoar");
+                    Destroy(gObj);
+                    obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
+                }
+            }
+        }
     }
 }
