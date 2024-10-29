@@ -104,6 +104,12 @@ public class Player : MonoBehaviour
                 {
                     rb.velocity = rb.velocity.normalized * limitDash;
                 }
+
+                //スタミナが切れたら
+                if (nowStamina <= 0)
+                {
+                    running = false;
+                }
             }
             else //通常時
             {
