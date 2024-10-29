@@ -104,6 +104,12 @@ public class Player : MonoBehaviour
                 {
                     rb.velocity = rb.velocity.normalized * limitDash;
                 }
+
+                //スタミナが切れたら
+                if (nowStamina <= 0)
+                {
+                    running = false;
+                }
             }
             else //通常時
             {
@@ -166,8 +172,8 @@ public class Player : MonoBehaviour
 
             playerlook.y += lookVector.x * lookspeed;
 
-            //Camera.main.transform.localRotation = Quaternion.Euler(playerlook);
-            transform.rotation = Quaternion.Euler(playerlook);
+            Camera.main.transform.localRotation = Quaternion.Euler(playerlook.x, 0, 0);
+            transform.rotation = Quaternion.Euler(0,playerlook.y,0);
         }
     }
 
