@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxStamina = 100f; //スタミナの最大値
     [SerializeField] private float limitMove = 10; //歩く速さの上限
     [SerializeField] private float limitDash = 15; //走る速さの上限
+
     public GameObject[] lifeArray = new GameObject[3];
     public int life;
 
@@ -181,20 +182,19 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            playerspeed = 10;
+            Invoke(nameof(SpeedUp), 3.0f); //3秒後にplayerspeedを5に戻す
             life--;
             lifeArray[life].SetActive(false);
             if (life <= 0)
             {
                 SceneManager.LoadScene("GameOverScene");
             }
-            StartCoroutine("SpeedUp");
         }
     }
 
-    IEnumerator SpeedUp()
+    void SpeedUp()
     {
-        playerspeed = 10;
-        yield return new WaitForSeconds(3.0f);
         playerspeed = 5;
     }
 }

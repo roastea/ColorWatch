@@ -47,7 +47,7 @@ public class EnemyBoar : MonoBehaviour
 
         if (IsDetected)
         {
-            agent.destination = player.position;
+            //agent.destination = player.position;
             //transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.x, transform.position.y), speed * Time.deltaTime);
         }
         else
@@ -59,7 +59,7 @@ public class EnemyBoar : MonoBehaviour
         }
     }
 
-    public void GotoNextPoint()
+    void GotoNextPoint()
     {
         if (points.Length == 0)
         {
@@ -73,7 +73,6 @@ public class EnemyBoar : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //Target = GameObject.Find("Player").transform.position;
         if (other.CompareTag("LightPillar"))
         {
             Destroy(this.gameObject);
