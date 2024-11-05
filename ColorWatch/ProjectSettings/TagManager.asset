@@ -6,8 +6,11 @@ TagManager:
   tags:
   - LightPillar
   - Enemy
-  - BlackLight
-  - EnemyShy
+  - Brown
+  - Red
+  - Green
+  - Yellow
+  - Blue
   layers:
   - Default
   - TransparentFX
@@ -15,11 +18,11 @@ TagManager:
   - 
   - Water
   - UI
+  - LightPillar
+  - SearchArea
   - 
   - 
-  - BlackLight
-  - Enemy
-  - EnemyShy
+  - 
   - 
   - 
   - 

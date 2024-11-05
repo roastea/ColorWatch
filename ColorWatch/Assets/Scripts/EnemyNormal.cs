@@ -19,10 +19,7 @@ public class EnemyNormal : MonoBehaviour
     public TextMeshProUGUI killCount;
     public int kill;
 
-    //Color
-    [SerializeField] GameObject obj;
-    [SerializeField] Material m;
-    int normal = 0;
+    public int normal;
 
     private void Start()
     {
@@ -72,23 +69,23 @@ public class EnemyNormal : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("LightPillar"))
-        {
-            Destroy(this.gameObject);
-            kill++;
-            killCount.SetText("Enemy : {0} / 15", kill);
-            if (other.gameObject.name == "LightPillarNormal")
-            {
-                normal++;
-                if (normal == 4)
-                {
-                    GameObject gObj = GameObject.Find("LightPillarNormal");
-                    Destroy(gObj);
-                    obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
-                }
-            }
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("LightPillar"))
+    //    {
+    //        Destroy(this.gameObject);
+    //        kill++;
+    //        killCount.SetText("Enemy : {0} / 15", kill);
+    //        if (other.gameObject.name == "LightPillarNormal")
+    //        {
+    //            normal++;
+    //            if (normal == 4)
+    //            {
+    //                GameObject gObj = GameObject.Find("LightPillarNormal");
+    //                Destroy(gObj);
+    //                obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
+    //            }
+    //        }
+    //    }
+    //}
 }

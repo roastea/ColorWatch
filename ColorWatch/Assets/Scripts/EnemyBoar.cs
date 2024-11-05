@@ -6,7 +6,8 @@ using TMPro;
 
 public class EnemyBoar : MonoBehaviour
 {
-    EnemyNormal en;
+    public GameObject enObj;
+    [SerializeField] EnemyNormal en;
 
     //EnemyPatrol
     [SerializeField] Transform player;
@@ -16,18 +17,17 @@ public class EnemyBoar : MonoBehaviour
     NavMeshAgent agent;
     bool IsDetected = false;
 
-    //Color
-    [SerializeField] GameObject obj;
-    [SerializeField] Material m;
-    int boar = 0;
+    public int boar;
 
     private void Start()
     {
+        en = enObj.GetComponent<EnemyNormal>();
+
+        Rigidbody rb = this.transform.GetComponent<Rigidbody>();
+
         agent = GetComponent<NavMeshAgent>();
 
         GotoNextPoint();
-
-        Rigidbody rb = this.transform.GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -47,7 +47,7 @@ public class EnemyBoar : MonoBehaviour
 
         if (IsDetected)
         {
-            //agent.destination = player.position;
+            agent.destination = player.position;
             //transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.x, transform.position.y), speed * Time.deltaTime);
         }
         else
@@ -73,20 +73,16 @@ public class EnemyBoar : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("LightPillar"))
+        if (other.gameObject.name == "LightPillarBoar")
         {
             Destroy(this.gameObject);
             en.kill++;
             en.killCount.SetText("Enemy : {0} / 15", en.kill);
-            if (other.gameObject.name == "LightPillarBoar")
+            boar++;
+            if (boar == 4)
             {
-                boar++;
-                if (boar == 4)
-                {
-                    GameObject gObj = GameObject.Find("LightPillarBoar");
-                    Destroy(gObj);
-                    obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
-                }
+                GameObject gObj = GameObject.Find("LightPillarBoar");
+                Destroy(gObj);
             }
         }
     }
