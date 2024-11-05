@@ -479,6 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd8ec5014c2b8d48ac7c87efdab3e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enObj: {fileID: 0}
+  en: {fileID: 0}
   player: {fileID: 1831016443}
   detectDistance: 5
   points:
@@ -486,8 +488,7 @@ MonoBehaviour:
   - {fileID: 2146355847}
   - {fileID: 1579349973}
   - {fileID: 1886480876}
-  obj: {fileID: 1776900616}
-  m: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
+  boar: 0
 --- !u!4 &300241099 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1945284460452675415, guid: 97158d3132c675243b7dcfe6ce126174, type: 3}
@@ -829,7 +830,7 @@ GameObject:
   - component: {fileID: 1012761107}
   - component: {fileID: 1012761108}
   - component: {fileID: 1012761109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SearchArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1244,8 +1245,7 @@ MonoBehaviour:
   - {fileID: 1886480876}
   killCount: {fileID: 479029544}
   kill: 0
-  obj: {fileID: 721091077}
-  m: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
+  normal: 0
 --- !u!1 &1453853647 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 287288980886128278, guid: ee42df58adf55a54f9ac365586d20c9d, type: 3}
@@ -1689,9 +1689,17 @@ PrefabInstance:
       propertyPath: points.Array.data[3]
       value: 
       objectReference: {fileID: 1886480876}
+    - target: {fileID: 1950733603626000112, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3123676566440552650, guid: e58e69218226e7645b377ad83bee3673, type: 3}
       propertyPath: m_Name
       value: EnemyShyBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123676566440552650, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6404234137158488551, guid: e58e69218226e7645b377ad83bee3673, type: 3}
       propertyPath: player
@@ -1705,6 +1713,10 @@ PrefabInstance:
       propertyPath: blacklightscript
       value: 
       objectReference: {fileID: 1594177656}
+    - target: {fileID: 8802177082350070638, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8834068256228203153, guid: e58e69218226e7645b377ad83bee3673, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33
@@ -1780,7 +1792,7 @@ PrefabInstance:
       objectReference: {fileID: 563447212}
     - target: {fileID: 2549724601137587029, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2549724601137587029, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
       propertyPath: m_TagString
