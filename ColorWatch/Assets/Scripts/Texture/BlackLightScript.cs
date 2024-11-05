@@ -27,15 +27,18 @@ public class BlackLightScript : MonoBehaviour
 
     public void OnLight(InputAction.CallbackContext context)
     {
+
         if (context.started)
         {
             if (!powerOn)
             {
                 powerOn = true;
+                Debug.Log("Onにしたよ");
             }
             else
             {
                 powerOn = false;
+                Debug.Log("Offにしたよ");
             }
         }
     }
@@ -60,8 +63,10 @@ public class BlackLightScript : MonoBehaviour
 
                             material.SetFloat("_MaxAngle", maxAngle);
 
-                            nowbattery -= 0.01f;
+                            nowbattery -= 0.0001f;
                             batterySlider.value = nowbattery;
+
+                            Debug.Log("ライト");
                         }
                         else //ライトOFF
                         {
