@@ -66,7 +66,7 @@ public class BlackLightScript : MonoBehaviour
                             nowbattery -= 0.0001f;
                             batterySlider.value = nowbattery;
 
-                            Debug.Log("ライト");
+                            //Debug.Log("ライト");
                         }
                         else //ライトOFF
                         {

@@ -47,6 +47,7 @@ public class EnemyBoarSearch : MonoBehaviour
                 {
                     Debug.Log("touch!");
                     agent.speed = 0;
+                    //
                     agent.speed += 5;
                     agent.destination = target;
                     agent.speed -= 5;
