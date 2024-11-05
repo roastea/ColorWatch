@@ -11,6 +11,8 @@ TagManager:
   - Green
   - Yellow
   - Blue
+  - BlackLight
+  - EnemyShy
   layers:
   - Default
   - TransparentFX
@@ -20,9 +22,9 @@ TagManager:
   - UI
   - LightPillar
   - SearchArea
-  - 
-  - 
-  - 
+  - EnemyShy
+  - Enemy
+  - BlackLight
   - 
   - 
   - 
