@@ -12,4 +12,13 @@ public class FinishGame : MonoBehaviour
       Application.Quit();
 #endif
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            UnityEditor.EditorApplication.isPlaying = false;
+        else
+            Application.Quit();
+    }
+
 }
