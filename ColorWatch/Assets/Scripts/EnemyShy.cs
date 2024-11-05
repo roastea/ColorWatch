@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
 using UnityEditor.SearchService;
-using UnityEngine.SceneManagement;
 
 public class EnemyShy : MonoBehaviour
 {
@@ -16,20 +15,17 @@ public class EnemyShy : MonoBehaviour
     NavMeshAgent agent;
     bool IsDetected = false;
 
-    //Count(life & kill)
-    public TextMeshProUGUI lifeCount;
+    //Count(kill)
     public TextMeshProUGUI killCount;
-    public int life;
     public int kill;
 
     //Color
-    //[SerializeField] GameObject obj;
-    //[SerializeField] Material m;
-    //int normal = 0;
+    [SerializeField] GameObject obj;
+    [SerializeField] Material m;
+    int shy = 0;
 
     private void Start()
     {
-        life = 3;
         kill = 0;
 
         agent = GetComponent<NavMeshAgent>();
@@ -53,7 +49,7 @@ public class EnemyShy : MonoBehaviour
 
         if (IsDetected)
         {
-            agent.destination = player.position;
+            //agent.destination = player.position;
         }
         else
         {
@@ -61,12 +57,6 @@ public class EnemyShy : MonoBehaviour
             {
                 GotoNextPoint();
             }
-        }
-
-        //体力がゼロになったら
-        if (life <= 0)
-        {
-            SceneManager.LoadScene("GameOverScene");
         }
     }
 
@@ -84,25 +74,21 @@ public class EnemyShy : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //if(other.CompareTag("Player"))
-        //{
-        //    life--;
-        //    lifeCount.SetText("Life : {0}", life);
-        //}
-        //if(other.CompareTag("LightPillar"))
-        //{
-        //    Destroy(this.gameObject);
-        //    kill++;
-        //    killCount.SetText("Enemy : {0} / 15", kill);
-        //    if(other.gameObject.name=="LightPillarNormal")
-        //    {
-        //        normal++;
-        //        if(normal == 4){
-        //            GameObject gObj = GameObject.Find("LightPillarNormal");
-        //            Destroy(gObj);
-        //            obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
-        //        }
-        //    }
-        //}
+        if (other.CompareTag("LightPillar"))
+        {
+            Destroy(this.gameObject);
+            kill++;
+            killCount.SetText("Enemy : {0} / 15", kill);
+            if (other.gameObject.name == "LightPillarNormal")
+            {
+                shy++;
+                if (shy == 4)
+                {
+                    GameObject gObj = GameObject.Find("LightPillarNormal");
+                    Destroy(gObj);
+                    obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
+                }
+            }
+        }
     }
 }

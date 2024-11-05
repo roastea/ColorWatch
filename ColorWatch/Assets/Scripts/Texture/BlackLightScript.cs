@@ -9,6 +9,7 @@ public class BlackLightScript : MonoBehaviour
     public Transform judge;
     public Transform player;
     public float maxAngle = 25f;
+    public bool ShyStop = false;
 
     private bool powerOn = false;
 
@@ -33,13 +34,29 @@ public class BlackLightScript : MonoBehaviour
             if (!powerOn)
             {
                 powerOn = true;
-                Debug.Log("Onにしたよ");
             }
             else
             {
                 powerOn = false;
-                Debug.Log("Offにしたよ");
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyShy"))
+        {
+            ShyStop = true;
+            Debug.Log("入った");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("EnemyShy"))
+        {
+            ShyStop = false;
+            Debug.Log("出た");
         }
     }
 
@@ -65,8 +82,6 @@ public class BlackLightScript : MonoBehaviour
 
                             nowbattery -= 0.0001f;
                             batterySlider.value = nowbattery;
-
-                            //Debug.Log("ライト");
                         }
                         else //ライトOFF
                         {

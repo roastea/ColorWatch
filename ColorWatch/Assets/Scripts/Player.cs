@@ -96,6 +96,17 @@ public class Player : MonoBehaviour
             if (running) //ƒ_ƒbƒVƒ…
             {
                 playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed * dashspeed;
+
+                //Šµ«‚ğÁ‚µ‚½‚¢
+                if (moveVector.x < 0 && playermove.x > 0 || moveVector.x > 0 && playermove.x < 0)
+                {
+                    rb.velocity = Vector3.zero;
+                }
+                if (moveVector.y < 0 && playermove.z > 0 || moveVector.y > 0 && playermove.z < 0)
+                {
+                    rb.velocity = Vector3.zero;
+                }
+
                 rb.AddRelativeForce(playermove);
 
                 nowStamina -= 0.1f;
@@ -115,6 +126,17 @@ public class Player : MonoBehaviour
             else //’Êí
             {
                 playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed;
+
+                //Šµ«‚ğÁ‚µ‚½‚¢
+                if (moveVector.x < 0 && playermove.x > 0 || moveVector.x > 0 && playermove.x < 0)
+                {
+                    rb.velocity = Vector3.zero;
+                }
+                if (moveVector.y < 0 && playermove.y > 0 || moveVector.y > 0 && playermove.y < 0)
+                {
+                    rb.velocity = Vector3.zero;
+                }
+
                 rb.AddRelativeForce(playermove);
 
                 //‰Á‘¬‚µ‚·‚¬‚È‚¢‚æ‚¤‚É§ŒÀ
