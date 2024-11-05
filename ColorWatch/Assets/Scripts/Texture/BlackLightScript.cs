@@ -33,12 +33,10 @@ public class BlackLightScript : MonoBehaviour
             if (!powerOn)
             {
                 powerOn = true;
-                Debug.Log("Onにしたよ");
             }
             else
             {
                 powerOn = false;
-                Debug.Log("Offにしたよ");
             }
         }
     }
@@ -65,8 +63,6 @@ public class BlackLightScript : MonoBehaviour
 
                             nowbattery -= 0.0001f;
                             batterySlider.value = nowbattery;
-
-                            Debug.Log("ライト");
                         }
                         else //ライトOFF
                         {
