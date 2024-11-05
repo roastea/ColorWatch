@@ -9,6 +9,7 @@ public class BlackLightScript : MonoBehaviour
     public Transform judge;
     public Transform player;
     public float maxAngle = 25f;
+    public bool ShyStop = false;
 
     private bool powerOn = false;
 
@@ -38,6 +39,24 @@ public class BlackLightScript : MonoBehaviour
             {
                 powerOn = false;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyShy"))
+        {
+            ShyStop = true;
+            Debug.Log("ì¸Ç¡ÇΩ");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("EnemyShy"))
+        {
+            ShyStop = false;
+            Debug.Log("èoÇΩ");
         }
     }
 
