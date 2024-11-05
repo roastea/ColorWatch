@@ -6,70 +6,68 @@ using UnityEngine.AI;
 public class EnemyBoarSearch : MonoBehaviour
 {
     //EnemyPatrol
-    public Transform[] points;
-    private int destPoint = 0;
+    //public Transform[] points;
+    //private int destPoint = 0;
 
     //EnemySearch
+    //float speed = 5;
+    public Transform player;
+    //public Transform ebPos;
     public GameObject enemyBoar;
-    [SerializeField] Transform player;
     NavMeshAgent agent;
     private RaycastHit hit;
+    private Vector3 playerPos;
     private Vector3 target;
 
     void Start()
     {
-        InvokeRepeating("Position", 0f, 5.0f);
         agent = enemyBoar.GetComponent<NavMeshAgent>();
-        GotoNextPoint();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        playerPos = player.transform.position;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) //ok
         {
-            GameObject Player = GameObject.Find("Player");
+            target = playerPos;
 
             var diff = target - transform.position;
             var distance = diff.magnitude;
             var direction = diff.normalized;
 
-            if (Physics.Raycast(transform.position, direction, out hit, distance))
+            if (Physics.Raycast(transform.position, direction, out hit, distance)) //ok
             {
-                if (hit.transform.gameObject == Player)
-                {
-                    //agent.isStopped = false;
-                    agent.destination = target;
+                //ebPos.position = Vector3.MoveTowards(transform.position, new Vector3(target.x, transform.position.y), speed * Time.deltaTime);
 
+                if (hit.transform.gameObject == player) //”½‰ž‚µ‚Ä‚È‚¢
+                {
+                    Debug.Log("touch!");
+                    agent.speed = 0;
+                    agent.speed += 5;
+                    agent.destination = target;
+                    agent.speed -= 5;
                 }
                 else
                 {
-                    //agent.isStopped = true;
-                    GotoNextPoint();
+                    //GotoNextPoint();
                 }
             }
         }
     }
 
-    void GotoNextPoint()
-    {
-        if (points.Length == 0)
-        {
-            return;
-        }
+    //void GotoNextPoint()
+    //{
+    //    if (points.Length == 0)
+    //    {
+    //        return;
+    //    }
 
-        agent.destination = points[destPoint].position;
+    //    agent.destination = points[destPoint].position;
 
-        destPoint = (destPoint + 1) % points.Length;
-    }
-
-    void Position()
-    {
-        target = player.transform.position;
-    }
+    //    destPoint = (destPoint + 1) % points.Length;
+    //}
 }
