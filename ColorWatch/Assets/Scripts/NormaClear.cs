@@ -10,6 +10,8 @@ public class NormaClear : MonoBehaviour
     bool isClearFlag = false;
 
     [SerializeField] GameObject ClearZone;
+    [SerializeField] GameObject door1;
+    [SerializeField] GameObject door2;
 
     private void Start()
     {
@@ -24,6 +26,8 @@ public class NormaClear : MonoBehaviour
             {
                 isClearFlag = true;
                 Instantiate(ClearZone);
+                Destroy(door1);
+                Destroy(door2);
             }
         }
     }
