@@ -26,6 +26,7 @@ public class EnemyNormal : MonoBehaviour
         kill = 0;
 
         agent = GetComponent<NavMeshAgent>();
+
         GotoNextPoint();
     }
 
@@ -69,23 +70,19 @@ public class EnemyNormal : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    //void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("LightPillar"))
-    //    {
-    //        Destroy(this.gameObject);
-    //        kill++;
-    //        killCount.SetText("Enemy : {0} / 15", kill);
-    //        if (other.gameObject.name == "LightPillarNormal")
-    //        {
-    //            normal++;
-    //            if (normal == 4)
-    //            {
-    //                GameObject gObj = GameObject.Find("LightPillarNormal");
-    //                Destroy(gObj);
-    //                obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
-    //            }
-    //        }
-    //    }
-    //}
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "LightPillarNormal")
+        {
+            Destroy(this.gameObject);
+            kill++;
+            killCount.SetText("Enemy : {0} / 10", kill);
+            normal++;
+            if (normal == 4)
+            {
+                GameObject gObj = GameObject.Find("LightPillarNormal");
+                Destroy(gObj);
+            }
+        }
+    }
 }

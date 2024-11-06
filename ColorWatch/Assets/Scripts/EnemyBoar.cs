@@ -23,8 +23,6 @@ public class EnemyBoar : MonoBehaviour
     {
         en = enObj.GetComponent<EnemyNormal>();
 
-        Rigidbody rb = this.transform.GetComponent<Rigidbody>();
-
         agent = GetComponent<NavMeshAgent>();
 
         GotoNextPoint();
@@ -77,9 +75,9 @@ public class EnemyBoar : MonoBehaviour
         {
             Destroy(this.gameObject);
             en.kill++;
-            en.killCount.SetText("Enemy : {0} / 15", en.kill);
+            en.killCount.SetText("Enemy : {0} / 10", en.kill);
             boar++;
-            if (boar == 4)
+            if (boar == 3)
             {
                 GameObject gObj = GameObject.Find("LightPillarBoar");
                 Destroy(gObj);

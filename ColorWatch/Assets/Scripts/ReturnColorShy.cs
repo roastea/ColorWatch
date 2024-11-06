@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReturnColorBoar : MonoBehaviour
+public class ReturnColorShy : MonoBehaviour
 {
-    public GameObject ebObj;
-    [SerializeField] EnemyBoar eb;
+    public GameObject shyObj;
+    [SerializeField] EnemyShy shy;
 
     [SerializeField] Material changed;
 
     private void Start()
     {
-        eb = ebObj.GetComponent<EnemyBoar>();
+        shy = shyObj.GetComponent<EnemyShy>();
     }
 
     private void Update()
     {
-        if (eb.boar == 3)
+        if (shy.shy == 3)
         {
             GetComponent<Renderer>().material = changed;
         }

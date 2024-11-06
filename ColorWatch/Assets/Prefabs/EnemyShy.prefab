@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1828705121876441892}
   - component: {fileID: 2077480138302541913}
-  - component: {fileID: 6404234137158488551}
   m_Layer: 0
   m_Name: SearchArea
   m_TagString: Untagged
@@ -54,22 +53,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 4}
---- !u!114 &6404234137158488551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950733603626000112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73f57d0fecdd20d498642c48b50ce33d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemyShy: {fileID: 3123676566440552650}
-  blacklightobject: {fileID: 0}
-  blacklightscript: {fileID: 0}
 --- !u!1 &3123676566440552650
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +69,7 @@ GameObject:
   - component: {fileID: 1006039622350374287}
   - component: {fileID: 1801702332086702399}
   m_Layer: 9
-  m_Name: EnemyShyBody
+  m_Name: EnemyShy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,6 +237,7 @@ MonoBehaviour:
   kill: 0
   obj: {fileID: 0}
   m: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
+  shy: 0
 --- !u!1 &8802177082350070638
 GameObject:
   m_ObjectHideFlags: 0

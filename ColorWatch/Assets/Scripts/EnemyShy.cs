@@ -7,6 +7,9 @@ using UnityEditor.SearchService;
 
 public class EnemyShy : MonoBehaviour
 {
+    public GameObject enObj;
+    [SerializeField] EnemyNormal en;
+
     //EnemyPatrol
     [SerializeField] Transform player;
     [SerializeField] float detectDistance;
@@ -15,20 +18,14 @@ public class EnemyShy : MonoBehaviour
     NavMeshAgent agent;
     bool IsDetected = false;
 
-    //Count(kill)
-    public TextMeshProUGUI killCount;
-    public int kill;
-
-    //Color
-    [SerializeField] GameObject obj;
-    [SerializeField] Material m;
-    int shy = 0;
+    public int shy;
 
     private void Start()
     {
-        kill = 0;
+        en = enObj.GetComponent<EnemyNormal>();
 
         agent = GetComponent<NavMeshAgent>();
+
         GotoNextPoint();
     }
 
@@ -49,7 +46,7 @@ public class EnemyShy : MonoBehaviour
 
         if (IsDetected)
         {
-            //agent.destination = player.position;
+            agent.destination = player.position;
         }
         else
         {
@@ -74,20 +71,16 @@ public class EnemyShy : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("LightPillar"))
+        if (other.gameObject.name == "LightPillarShy")
         {
             Destroy(this.gameObject);
-            kill++;
-            killCount.SetText("Enemy : {0} / 15", kill);
-            if (other.gameObject.name == "LightPillarNormal")
+            en.kill++;
+            en.killCount.SetText("Enemy : {0} / 10", en.kill);
+            shy++;
+            if (shy == 3)
             {
-                shy++;
-                if (shy == 4)
-                {
-                    GameObject gObj = GameObject.Find("LightPillarNormal");
-                    Destroy(gObj);
-                    obj.GetComponent<Renderer>().material = m; //オブジェクト複数個になるからタグで判別の方がいいかも
-                }
+                GameObject gObj = GameObject.Find("LightPillarShy");
+                Destroy(gObj);
             }
         }
     }
