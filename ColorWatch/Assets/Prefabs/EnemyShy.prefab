@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1828705121876441892}
   - component: {fileID: 2077480138302541913}
-  m_Layer: 0
+  - component: {fileID: 7813844739286498365}
+  m_Layer: 7
   m_Name: SearchArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,6 +54,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 4}
+--- !u!114 &7813844739286498365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950733603626000112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2668363139cbd6949bc563fa0bb5bf88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemyShy: {fileID: 0}
+  blacklightobject: {fileID: 0}
+  blacklightscript: {fileID: 0}
 --- !u!1 &3123676566440552650
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,7 +100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3123676566440552650}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 33, y: 1, z: -28.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -120,7 +137,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
+  - {fileID: 2100000, guid: 6fbda84d2e6cdab4885e925bc241104e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -226,6 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4420dd350a33439115ecc7f3be8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enObj: {fileID: 0}
+  en: {fileID: 0}
   player: {fileID: 0}
   detectDistance: 0
   points:
@@ -233,10 +252,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  killCount: {fileID: 0}
-  kill: 0
-  obj: {fileID: 0}
-  m: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
   shy: 0
 --- !u!1 &8802177082350070638
 GameObject:
@@ -248,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8718017054309610627}
   - component: {fileID: 7341422990622272153}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: StopJudge
   m_TagString: EnemyShy
   m_Icon: {fileID: 0}
