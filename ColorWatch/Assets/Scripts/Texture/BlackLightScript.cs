@@ -47,7 +47,7 @@ public class BlackLightScript : MonoBehaviour
         if (other.CompareTag("EnemyShy"))
         {
             ShyStop = true;
-            Debug.Log("ì¸Ç¡ÇΩ");
+            //Debug.Log("ì¸Ç¡ÇΩ");
         }
     }
 
@@ -56,7 +56,7 @@ public class BlackLightScript : MonoBehaviour
         if (other.CompareTag("EnemyShy"))
         {
             ShyStop = false;
-            Debug.Log("èoÇΩ");
+            //Debug.Log("èoÇΩ");
         }
     }
 

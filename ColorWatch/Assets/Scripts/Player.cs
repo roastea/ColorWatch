@@ -226,6 +226,5 @@ public class Player : MonoBehaviour
     void Invincible()
     {
         dameged = false;
-        Debug.Log("–³“GŠÔI—¹");
     }
 }
