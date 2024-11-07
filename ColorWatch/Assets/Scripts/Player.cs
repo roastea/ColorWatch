@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private bool moving;
     private bool looking;
     private bool running;
+    private bool dameged = false;
 
     private Vector2 moveVector;
     private Vector2 lookVector;
@@ -202,9 +203,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && !dameged)
         {
             playerspeed = 10;
+            dameged = true;
+            Invoke(nameof(Invincible), 3.0f); //3•bŒã‚É–³“Gó‘Ô‚ğ–ß‚·
             Invoke(nameof(SpeedUp), 3.0f); //3•bŒã‚Éplayerspeed‚ğ5‚É–ß‚·
             life--;
             lifeArray[life].SetActive(false);
@@ -218,5 +221,11 @@ public class Player : MonoBehaviour
     void SpeedUp()
     {
         playerspeed = 5;
+    }
+
+    void Invincible()
+    {
+        dameged = false;
+        Debug.Log("–³“GŠÔI—¹");
     }
 }
