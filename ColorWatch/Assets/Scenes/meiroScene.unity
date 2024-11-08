@@ -6867,7 +6867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16e8ec77553a88409dd34ebd4e71fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectDistance: 7
+  detectDistance: 5
   points:
   - {fileID: 504708993}
   - {fileID: 563100525}
@@ -9992,6 +9992,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3f2a4d776b3827b49aa366f0b74fec53, type: 2}
+    - target: {fileID: 2794772759325748547, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3126232420922667334, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5397126803016096734, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_Name
       value: EnemyBoar

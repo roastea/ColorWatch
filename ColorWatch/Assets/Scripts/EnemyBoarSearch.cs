@@ -50,43 +50,11 @@ public class EnemyBoarSearch : MonoBehaviour
         //}
         //else
         //{
-        //    if (!agent.pathPending && agent.remainingDistance < 0.5f)
-        //    {
-        //        GotoNextPoint();
-        //    }
-        //}
-
-        if(IsDetected) //範囲内のとき
-        {
-            StartCoroutine("Rotate");
-            targetPos = playerPos; //playerの位置取得
-            var diff = targetPos - transform.position;
-            var distance2 = diff.magnitude;
-            var direction = diff.normalized;
-
-            if (Physics.Raycast(transform.position, direction, out hit, distance2)) //ok
-            {
-                if (hit.transform.gameObject == player) //反応してない playerが原因？
-                {
-                    Debug.Log("touch!");
-                    agent.speed = 0;
-                    Invoke("AgentSpeedUp", 2.0f);
-                    agent.destination = targetPos;
-                    if (targetPos == agent.transform.position)
-                    {
-                        agent.speed = 0;
-                    }
-                }
-                else
-                {
-                    GotoNextPoint();
-                }
-            }
-        }
-        else
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
             GotoNextPoint();
         }
+        //}
     }
     //private void OnTriggerStay(Collider other)
     //{
@@ -116,6 +84,36 @@ public class EnemyBoarSearch : MonoBehaviour
     //        }
     //    }
     //}
+    private void OnTriggerStay(Collider other)
+    {
+        if (IsDetected) //範囲内のとき
+        {
+            StartCoroutine("Rotate");
+            targetPos = playerPos; //playerの位置取得
+            var diff = targetPos - transform.position;
+            var distance2 = diff.magnitude;
+            var direction = diff.normalized;
+
+            if (Physics.Raycast(transform.position, direction, out hit, distance2)) //ok
+            {
+                if (hit.transform.gameObject == player) //反応してない playerが原因？
+                {
+                    Debug.Log("touch!");
+                    agent.speed = 0;
+                    Invoke("AgentSpeedUp", 2.0f);
+                    agent.destination = targetPos;
+                    if (targetPos == agent.transform.position)
+                    {
+                        agent.speed = 0;
+                    }
+                }
+                else
+                {
+                    GotoNextPoint();
+                }
+            }
+        }
+    }
 
     void AgentSpeedUp()
     {
