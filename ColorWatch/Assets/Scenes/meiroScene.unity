@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &75878782
 GameObject:
@@ -621,8 +621,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
+--- !u!4 &80908051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3126232420922667334, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+  m_PrefabInstance: {fileID: 2008652552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &126494599
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!4 &129156450 stripped
 Transform:
@@ -772,6 +777,10 @@ PrefabInstance:
     - target: {fileID: 5397126803016096734, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5397126803016096734, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5651522746144399518, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_Layer
@@ -820,7 +829,7 @@ PrefabInstance:
     - target: {fileID: 7844924809770316462, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3f2a4d776b3827b49aa366f0b74fec53, type: 2}
+      objectReference: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
     - target: {fileID: 8890764205553103379, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.4
@@ -1171,7 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &195969064
 GameObject:
@@ -1614,6 +1623,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1364626892302843842, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3296516913153341979, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: player
       value: 
@@ -1641,7 +1654,7 @@ PrefabInstance:
     - target: {fileID: 3398839897002201414, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a40abce24746ca242b0e1868a1318614, type: 2}
+      objectReference: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
     - target: {fileID: 5938047063073659473, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.9
@@ -1806,7 +1819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &276331378
 GameObject:
@@ -1927,7 +1940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &280356470
 GameObject:
@@ -2048,7 +2061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &298052883
 GameObject:
@@ -2169,7 +2182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1001 &319827462
 PrefabInstance:
@@ -2186,6 +2199,10 @@ PrefabInstance:
     - target: {fileID: 1364626892302843842, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364626892302843842, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3296516913153341979, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: player
@@ -2214,7 +2231,7 @@ PrefabInstance:
     - target: {fileID: 3398839897002201414, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a40abce24746ca242b0e1868a1318614, type: 2}
+      objectReference: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
     - target: {fileID: 5938047063073659473, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.4
@@ -2557,7 +2574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &363297050
 GameObject:
@@ -2685,10 +2702,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5397126803016096734, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
   m_PrefabInstance: {fileID: 2008652552}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &391587082 stripped
+--- !u!114 &391587088
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5861839916590077048, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
-  m_PrefabInstance: {fileID: 2008652552}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391587081}
   m_Enabled: 1
@@ -2696,6 +2714,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd8ec5014c2b8d48ac7c87efdab3e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enObj: {fileID: 18970578}
+  en: {fileID: 18970579}
+  boar: 0
 --- !u!1 &395434589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,6 +2782,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1364626892302843842, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3296516913153341979, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: player
       value: 
@@ -2788,7 +2813,7 @@ PrefabInstance:
     - target: {fileID: 3398839897002201414, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a40abce24746ca242b0e1868a1318614, type: 2}
+      objectReference: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
     - target: {fileID: 5938047063073659473, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.9
@@ -3223,7 +3248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &504708992
 GameObject:
@@ -3406,7 +3431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &551405961 stripped
 GameObject:
@@ -4457,6 +4482,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 5397126803016096734, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5651522746144399518, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -4504,7 +4533,7 @@ PrefabInstance:
     - target: {fileID: 7844924809770316462, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3f2a4d776b3827b49aa366f0b74fec53, type: 2}
+      objectReference: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
     - target: {fileID: 8890764205553103379, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -5203,6 +5232,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3123676566440552650, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109524244594801316, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
     - target: {fileID: 7813844739286498365, guid: e58e69218226e7645b377ad83bee3673, type: 3}
       propertyPath: player
       value: 
@@ -5570,7 +5607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &942923937
 GameObject:
@@ -6131,6 +6168,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1364626892302843842, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3296516913153341979, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: player
       value: 
@@ -6158,7 +6199,7 @@ PrefabInstance:
     - target: {fileID: 3398839897002201414, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a40abce24746ca242b0e1868a1318614, type: 2}
+      objectReference: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
     - target: {fileID: 5938047063073659473, guid: f1a831134fbc19b448cb29ec8b7de8f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.7
@@ -6323,7 +6364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1162705918
 GameObject:
@@ -6444,7 +6485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1238442642
 GameObject:
@@ -6686,7 +6727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1276921855
 GameObject:
@@ -6809,6 +6850,31 @@ MonoBehaviour:
   enObj: {fileID: 18970578}
   en: {fileID: 18970579}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
+--- !u!1 &1277328332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 922552303053530680, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+  m_PrefabInstance: {fileID: 2008652552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1277328334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277328332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16e8ec77553a88409dd34ebd4e71fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectDistance: 7
+  points:
+  - {fileID: 504708993}
+  - {fileID: 563100525}
+  - {fileID: 505489359}
+  - {fileID: 1843388573}
+  player: {fileID: 1909896838}
+  enemyBoar: {fileID: 391587081}
 --- !u!1 &1309853788
 GameObject:
   m_ObjectHideFlags: 0
@@ -6928,7 +6994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1316055028
 GameObject:
@@ -7730,7 +7796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1546333283
 GameObject:
@@ -8093,7 +8159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1631390524
 GameObject:
@@ -8214,7 +8280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1660667415 stripped
 GameObject:
@@ -8582,7 +8648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!4 &1727184174 stripped
 Transform:
@@ -8829,7 +8895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 391587088}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1787602115
 GameObject:
@@ -9265,6 +9331,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShy
       objectReference: {fileID: 0}
+    - target: {fileID: 3123676566440552650, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109524244594801316, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
     - target: {fileID: 7813844739286498365, guid: e58e69218226e7645b377ad83bee3673, type: 3}
       propertyPath: player
       value: 
@@ -9591,6 +9665,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3123676566440552650, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109524244594801316, guid: e58e69218226e7645b377ad83bee3673, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
     - target: {fileID: 7813844739286498365, guid: e58e69218226e7645b377ad83bee3673, type: 3}
       propertyPath: player
       value: 
@@ -9943,6 +10025,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
     - target: {fileID: 5861839916590077048, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+      propertyPath: searchArea
+      value: 
+      objectReference: {fileID: 80908051}
+    - target: {fileID: 5861839916590077048, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: points.Array.data[0]
       value: 
       objectReference: {fileID: 504708993}
@@ -9965,7 +10051,7 @@ PrefabInstance:
     - target: {fileID: 7844924809770316462, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3f2a4d776b3827b49aa366f0b74fec53, type: 2}
+      objectReference: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
     - target: {fileID: 8890764205553103379, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.4
@@ -10006,10 +10092,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6057086324859040173, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5397126803016096734, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 391587088}
+    - targetCorrespondingSourceObject: {fileID: 922552303053530680, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1277328334}
   m_SourcePrefab: {fileID: 100100000, guid: 0a3d442c46318e046b771c62a2bc016e, type: 3}
 --- !u!1 &2037133485
 GameObject:
@@ -10312,7 +10405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ebObj: {fileID: 391587081}
-  eb: {fileID: 391587082}
+  eb: {fileID: 0}
   changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &2048699084 stripped
 GameObject:

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3126232420922667334}
   - component: {fileID: 2794772759325748547}
-  - component: {fileID: 6057086324859040173}
   m_Layer: 0
   m_Name: SearchArea
   m_TagString: Untagged
@@ -54,20 +53,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 4}
---- !u!114 &6057086324859040173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922552303053530680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d16e8ec77553a88409dd34ebd4e71fef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemyBoar: {fileID: 5397126803016096734}
 --- !u!1 &5397126803016096734
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +67,6 @@ GameObject:
   - component: {fileID: 7187252127461214141}
   - component: {fileID: 7644665322719516213}
   - component: {fileID: 693599482753484136}
-  - component: {fileID: 5861839916590077048}
   m_Layer: 0
   m_Name: EnemyBoar
   m_TagString: Enemy
@@ -229,27 +213,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5861839916590077048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5397126803016096734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd8ec5014c2b8d48ac7c87efdab3e4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  detectDistance: 5
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  obj: {fileID: 0}
-  m: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &5651522746144399518
 GameObject:
   m_ObjectHideFlags: 0
