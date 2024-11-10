@@ -59,7 +59,7 @@ public class EnemyBoarSearch : MonoBehaviour
             }
         }
     }
-    private void OnTriggerStay(Collider other) //EnterÇÃï˚Ç‡ïKóvÅH
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -85,14 +85,9 @@ public class EnemyBoarSearch : MonoBehaviour
                 {
                     AgentSpeedUp();
                     agent.destination = targetPos;
-                    AgentStan();
-                    Invoke("AgentSpeedDown", 3.0f);
+                    //AgentStan();
+                    Invoke("AgentSpeedDown", 2.0f);
                     getPos = true;
-                    //if (agent.transform.position == targetPos)
-                    //{
-                    //    Debug.Log("down!");
-                    //    Invoke("AgentSpeedDown", 2.0f);
-                    //}
                 }
                 else
                 {
@@ -138,6 +133,6 @@ public class EnemyBoarSearch : MonoBehaviour
         //Quaternion quaternion = Quaternion.LookRotation(vector3);
         Quaternion quaternion = Quaternion.identity;
         enemyBoar.transform.rotation = quaternion;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.0f);
     }
 }
