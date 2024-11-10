@@ -71,13 +71,15 @@ public class EnemyBoarSearch : MonoBehaviour
 
             if (Physics.Raycast(transform.position, direction, out hit, distance))
             {
-                StartCoroutine("Rotate");
-
                 if (getPos == true)
                 {
                     getPos = false;
                     targetPos = playerPos;
                 }
+
+                StartCoroutine("Rotate");
+
+                agent.speed = 2;
 
                 if (hit.transform.gameObject == Player && getPos == false)
                 {
@@ -89,8 +91,7 @@ public class EnemyBoarSearch : MonoBehaviour
                     //if (agent.transform.position == targetPos)
                     //{
                     //    Debug.Log("down!");
-                    //agent.speed = 0;
-                    //Invoke("AgentSpeedDown", 2.0f);
+                    //    Invoke("AgentSpeedDown", 2.0f);
                     //}
                 }
                 else
@@ -138,6 +139,5 @@ public class EnemyBoarSearch : MonoBehaviour
         Quaternion quaternion = Quaternion.identity;
         enemyBoar.transform.rotation = quaternion;
         yield return new WaitForSeconds(1.5f);
-        agent.speed = 2;
     }
 }
