@@ -14,11 +14,12 @@ public class EnemyBoarSearch : MonoBehaviour
 
     //EnemySearch
     public Transform player;
-    //private GameObject lookToPlayer;
+    public GameObject Player;
     public GameObject enemyBoar;
     private RaycastHit hit;
     private Vector3 playerPos;
     private Vector3 targetPos;
+    private bool getPos = true;
 
     void Start()
     {
@@ -29,6 +30,8 @@ public class EnemyBoarSearch : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(agent.speed);
+
         playerPos = player.transform.position;
 
         float distance;
@@ -44,71 +47,55 @@ public class EnemyBoarSearch : MonoBehaviour
             IsDetected = false;
         }
 
-        //if (IsDetected)
-        //{
-        //    agent.destination = targetPos;
-        //}
-        //else
-        //{
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        if (IsDetected)
         {
-            GotoNextPoint();
+            //agent.destination = targetPos;
         }
-        //}
-    }
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (other.CompareTag("Player")) //ok
-    //    {
-    //        var diff = targetPos - transform.position;
-    //        var distance = diff.magnitude;
-    //        var direction = diff.normalized;
-
-    //        if (Physics.Raycast(transform.position, direction, out hit, distance)) //ok
-    //        {
-    //            if (hit.transform.gameObject == player) //反応してない playerが原因？
-    //            {
-    //                Debug.Log("touch!");
-    //                agent.speed = 0;
-    //                Invoke("AgentSpeedUp", 2.0f);
-    //                agent.destination = targetPos;
-    //                if (targetPos == agent.transform.position)
-    //                {
-    //                    agent.speed = 0;
-    //                }
-    //            }
-    //            else
-    //            {
-    //                GotoNextPoint();
-    //            }
-    //        }
-    //    }
-    //}
-    private void OnTriggerStay(Collider other)
-    {
-        if (IsDetected) //範囲内のとき
+        else
         {
-            StartCoroutine("Rotate");
-            targetPos = playerPos; //playerの位置取得
-            var diff = targetPos - transform.position;
-            var distance2 = diff.magnitude;
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                GotoNextPoint();
+            }
+        }
+    }
+    private void OnTriggerStay(Collider other) //Enterの方も必要？
+    {
+        if (other.CompareTag("Player"))
+        {
+            //targetPos = playerPos; //playerの現在地取得
+
+            var diff = playerPos - transform.position;
+            var distance = diff.magnitude;
             var direction = diff.normalized;
 
-            if (Physics.Raycast(transform.position, direction, out hit, distance2)) //ok
+            if (Physics.Raycast(transform.position, direction, out hit, distance))
             {
-                if (hit.transform.gameObject == player) //反応してない playerが原因？
+                StartCoroutine("Rotate");
+
+                if (getPos == true)
                 {
-                    Debug.Log("touch!");
-                    agent.speed = 0;
-                    Invoke("AgentSpeedUp", 2.0f);
+                    getPos = false;
+                    targetPos = playerPos;
+                }
+
+                if (hit.transform.gameObject == Player && getPos == false)
+                {
+                    AgentSpeedUp();
                     agent.destination = targetPos;
-                    if (targetPos == agent.transform.position)
-                    {
-                        agent.speed = 0;
-                    }
+                    AgentStan();
+                    Invoke("AgentSpeedDown", 3.0f);
+                    getPos = true;
+                    //if (agent.transform.position == targetPos)
+                    //{
+                    //    Debug.Log("down!");
+                    //agent.speed = 0;
+                    //Invoke("AgentSpeedDown", 2.0f);
+                    //}
                 }
                 else
                 {
+                    AgentSpeedDown();
                     GotoNextPoint();
                 }
             }
@@ -117,12 +104,17 @@ public class EnemyBoarSearch : MonoBehaviour
 
     void AgentSpeedUp()
     {
-        agent.speed += 5;
+        agent.speed = 10;
     }
 
     void AgentSpeedDown()
     {
-        agent.speed -= 5;
+        agent.speed = 2;
+    }
+
+    void AgentStan()
+    {
+        agent.speed = 0;
     }
 
     void GotoNextPoint()
@@ -139,10 +131,13 @@ public class EnemyBoarSearch : MonoBehaviour
 
     IEnumerator Rotate() //プレイヤーの方向を見る
     {
+        agent.speed = 0;
         Vector3 vector3 = targetPos - enemyBoar.transform.position; //playerとboarの座標からベクトルを計算
         vector3.y = 0f; //上下の回転しない
-        Quaternion quaternion = Quaternion.LookRotation(vector3);
+        //Quaternion quaternion = Quaternion.LookRotation(vector3);
+        Quaternion quaternion = Quaternion.identity;
         enemyBoar.transform.rotation = quaternion;
         yield return new WaitForSeconds(1.5f);
+        agent.speed = 2;
     }
 }

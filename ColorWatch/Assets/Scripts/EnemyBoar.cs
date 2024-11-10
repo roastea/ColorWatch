@@ -8,12 +8,14 @@ public class EnemyBoar : MonoBehaviour
 {
     public GameObject enObj;
     [SerializeField] EnemyNormal en;
+    //[SerializeField] Material material;
 
     public int boar;
 
     private void Start()
     {
         en = enObj.GetComponent<EnemyNormal>();
+        //material.shader = Shader.Find("Unlit/BlackLight");
         boar = 0;
     }
 
@@ -34,6 +36,7 @@ public class EnemyBoar : MonoBehaviour
             {
                 GameObject gObj = GameObject.Find("LightPillarBoar");
                 Destroy(gObj);
+                //material.shader = Shader.Find("Standard");
             }
         }
     }

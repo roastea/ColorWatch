@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float playerspeed = 3;
+    [SerializeField] private float playerspeed = 5;
     [SerializeField] private float dashspeed = 1.3f;
     [SerializeField] private float lookspeed = 0.8f;
     [SerializeField] private float maxAngleX = 80; //‰º‚ðŒü‚­ŒÀŠE‚ÌŠp“x
