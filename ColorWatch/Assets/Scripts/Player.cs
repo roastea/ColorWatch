@@ -37,9 +37,15 @@ public class Player : MonoBehaviour
     public GameObject staminaGauge;
     private Slider staminaSlider;
 
+    AudioSource soundWalk;
+    AudioSource soundRun;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        soundWalk = GetComponent<AudioSource>();
+        soundRun = GetComponent<AudioSource>();
 
         staminaSlider = staminaGauge.GetComponent<Slider>();
         staminaSlider.maxValue = maxStamina;
@@ -80,10 +86,14 @@ public class Player : MonoBehaviour
     {
         if (context.started)
         {
+            soundRun.Play();
+            soundWalk.Stop();
             running = true;
         }
         else if (context.canceled)
         {
+            soundRun.Stop();
+            soundWalk.Play();
             running = false;
         }
 

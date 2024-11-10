@@ -19,8 +19,11 @@ public class BlackLightScript : MonoBehaviour
     public GameObject batteryGauge;
     private Slider batterySlider;
 
+    AudioSource soundLight;
+
     void Start()
     {
+        soundLight = GetComponent<AudioSource>();
         batterySlider = batteryGauge.GetComponent<Slider>();
         batterySlider.maxValue = maxBattery;
         nowbattery = maxBattery;
@@ -33,10 +36,12 @@ public class BlackLightScript : MonoBehaviour
         {
             if (!powerOn)
             {
+                soundLight.PlayOneShot(soundLight.clip);
                 powerOn = true;
             }
             else
             {
+                soundLight.PlayOneShot(soundLight.clip);
                 powerOn = false;
             }
         }
