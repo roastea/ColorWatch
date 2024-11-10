@@ -37,10 +37,10 @@ public class EnemyShySearch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "BlackLight")
+        if (other.CompareTag("BlackLight"))
         {
             ShyStop = true;
-            Debug.Log("ì¸Ç¡ÇΩ");
+            //Debug.Log("ì¸Ç¡ÇΩ");
             agent.speed = 0;
         }
     }
@@ -50,7 +50,7 @@ public class EnemyShySearch : MonoBehaviour
         if (other.CompareTag("BlackLight"))
         {
             ShyStop = false;
-            Debug.Log("èoÇΩ");
+            //Debug.Log("èoÇΩ");
             agent.speed = 3;
         }
     }
