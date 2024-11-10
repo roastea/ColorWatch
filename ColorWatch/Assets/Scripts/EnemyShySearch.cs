@@ -19,13 +19,15 @@ public class EnemyShySearch : MonoBehaviour
     private Vector3 playerPos;
     private Vector3 target;
 
-    public GameObject blacklightobject;
-    [SerializeField] BlackLightScript blacklightscript;
+    //public GameObject blacklightobject;
+    //[SerializeField] BlackLightScript blacklightscript;
+
+    private bool ShyStop = false;
 
     void Start()
     {
         agent = enemyShy.GetComponent<NavMeshAgent>();
-        blacklightscript = blacklightobject.GetComponent<BlackLightScript>();
+        //blacklightscript = blacklightobject.GetComponent<BlackLightScript>();
     }
 
     private void Update()
@@ -33,15 +35,35 @@ public class EnemyShySearch : MonoBehaviour
         playerPos = player.transform.position;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(blacklightscript.ShyStop == true)
+        if (other.tag == "BlackLight")
         {
+            ShyStop = true;
+            Debug.Log("ì¸Ç¡ÇΩ");
             agent.speed = 0;
         }
-        else if(blacklightscript.ShyStop == false)
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("BlackLight"))
         {
+            ShyStop = false;
+            Debug.Log("èoÇΩ");
             agent.speed = 3;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(ShyStop)
+        {
+            //agent.speed = 0;
+        }
+        else
+        {
+            //agent.speed = 3;
 
             if (other.CompareTag("Player")) //ok
             {
