@@ -30,7 +30,7 @@ public class EnemyBoarSearch : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(agent.speed);
+        //Debug.Log(agent.speed);
 
         playerPos = player.transform.position;
 
