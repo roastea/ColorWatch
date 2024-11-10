@@ -9,6 +9,7 @@ public class BlackLightScript : MonoBehaviour
     public Transform judge;
     public Transform player;
     public float maxAngle = 25f;
+    [SerializeField] float powerDown = 0.00005f;
     //public bool ShyStop = false;
 
     private bool powerOn = false;
@@ -72,7 +73,7 @@ public class BlackLightScript : MonoBehaviour
                 {
                     if(material.shader.name=="Unlit/BlackLight")
                     {
-                        if (powerOn) //ライトON
+                        if (powerOn && nowbattery > 0) //ライトON
                         {
                             material.SetVector("_Judge", new Vector4(judge.position.x, judge.position.y, judge.position.z, 0));
 
@@ -80,7 +81,7 @@ public class BlackLightScript : MonoBehaviour
 
                             material.SetFloat("_MaxAngle", maxAngle);
 
-                            nowbattery -= 0.00001f;
+                            nowbattery -= powerDown;
                             batterySlider.value = nowbattery;
                         }
                         else //ライトOFF
