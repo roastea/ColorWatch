@@ -15,10 +15,10 @@ public class FinishGame : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //    UnityEditor.EditorApplication.isPlaying = false;
-        //else
-        //    Application.Quit();
+        if (Input.GetKeyDown(KeyCode.Escape))
+            UnityEditor.EditorApplication.isPlaying = false;
+        else
+            Application.Quit();
     }
 
 }
