@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService;
 
 public class EnemyNormal : MonoBehaviour
 {
