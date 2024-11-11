@@ -44,8 +44,8 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        soundWalk = GetComponent<AudioSource>();
-        soundRun = GetComponent<AudioSource>();
+        //soundWalk = GetComponent<AudioSource>();
+        //soundRun = GetComponent<AudioSource>();
 
         staminaSlider = staminaGauge.GetComponent<Slider>();
         staminaSlider.maxValue = maxStamina;
@@ -86,14 +86,14 @@ public class Player : MonoBehaviour
     {
         if (context.started)
         {
-            soundRun.Play();
-            soundWalk.Stop();
+            //soundRun.Play();
+            //soundWalk.Stop();
             running = true;
         }
         else if (context.canceled)
         {
-            soundRun.Stop();
-            soundWalk.Play();
+            //soundRun.Stop();
+            //soundWalk.Play();
             running = false;
         }
 
