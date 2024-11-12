@@ -5,8 +5,11 @@ using UnityEngine.AI;
 using TMPro;
 //using UnityEditor.SearchService;
 
-public class EnemyNormal : MonoBehaviour
+public class EnemyNormalOther : MonoBehaviour
 {
+    public GameObject enObj;
+    [SerializeField] EnemyNormal en;
+
     //EnemyPatrol
     [SerializeField] Transform player;
     [SerializeField] float detectDistance;
@@ -16,14 +19,14 @@ public class EnemyNormal : MonoBehaviour
     bool IsDetected = false;
 
     //Count(kill)
-    public TextMeshProUGUI killCount;
-    public int kill;
+    //public TextMeshProUGUI killCount;
+    //public int kill;
 
     public int normal;
 
     private void Start()
     {
-        kill = 0;
+        en = enObj.GetComponent<EnemyNormal>();
 
         agent = GetComponent<NavMeshAgent>();
 
@@ -75,10 +78,10 @@ public class EnemyNormal : MonoBehaviour
         if (other.gameObject.name == "LightPillarNormal")
         {
             Destroy(this.gameObject);
-            kill++;
-            killCount.SetText("Enemy : {0} / 10", kill);
-            normal++;
-            if (normal == 2)
+            en.kill++;
+            en.killCount.SetText("Enemy : {0} / 10", en.kill);
+            en.normal++;
+            if (en.normal == 2)
             {
                 GameObject gObj = GameObject.Find("LightPillarNormal");
                 Destroy(gObj);
