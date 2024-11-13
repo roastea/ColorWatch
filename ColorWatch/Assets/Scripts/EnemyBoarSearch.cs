@@ -130,8 +130,8 @@ public class EnemyBoarSearch : MonoBehaviour
         agent.speed = 0;
         Vector3 vector3 = targetPos - enemyBoar.transform.position; //playerとboarの座標からベクトルを計算
         vector3.y = 0f; //上下の回転しない
-        //Quaternion quaternion = Quaternion.LookRotation(vector3);
-        Quaternion quaternion = Quaternion.identity;
+        Quaternion quaternion = Quaternion.LookRotation(vector3);
+        //Quaternion quaternion = Quaternion.identity;
         enemyBoar.transform.rotation = quaternion;
         yield return new WaitForSeconds(2.0f);
     }
