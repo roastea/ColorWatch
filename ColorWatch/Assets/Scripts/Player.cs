@@ -177,19 +177,19 @@ public class Player : MonoBehaviour
             {
                 if (lookVector.y > 0)
                 {
-                    playerlook.x -= lookVector.y * lookspeed;
+                    playerlook.x -= lookVector.y * lookspeed * Time.deltaTime;
                 }
             }
             else if (playerlook.x < minAngleX)
             {
                 if (lookVector.y < 0)
                 {
-                    playerlook.x -= lookVector.y * lookspeed;
+                    playerlook.x -= lookVector.y * lookspeed * Time.deltaTime;
                 }
             }
             else
             {
-                playerlook.x -= lookVector.y * lookspeed;
+                playerlook.x -= lookVector.y * lookspeed * Time.deltaTime;
             }
 
             //Camera.main.transform.localRotation = Quaternion.Euler(playerlook.x, 0, 0);
@@ -204,10 +204,10 @@ public class Player : MonoBehaviour
                 playerlook.y = 360 - playerlook.y;
             }
 
-            playerlook.y += lookVector.x * lookspeed;
+            playerlook.y += lookVector.x * lookspeed * Time.deltaTime;
 
             Camera.main.transform.localRotation = Quaternion.Euler(playerlook.x, 0, 0);
-            transform.rotation = Quaternion.Euler(0,playerlook.y,0);
+            transform.rotation = Quaternion.Euler(0,playerlook.y, 0);
         }
     }
 
