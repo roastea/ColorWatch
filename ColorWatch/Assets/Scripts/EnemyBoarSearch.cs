@@ -75,6 +75,7 @@ public class EnemyBoarSearch : MonoBehaviour
                 {
                     getPos = false;
                     targetPos = playerPos;
+                    Invoke("getPosition", 3.0f);
                 }
 
                 StartCoroutine("Rotate");
@@ -111,6 +112,11 @@ public class EnemyBoarSearch : MonoBehaviour
     void AgentStan()
     {
         agent.speed = 0;
+    }
+
+    void getPosition()
+    {
+        targetPos = playerPos;
     }
 
     void GotoNextPoint()
