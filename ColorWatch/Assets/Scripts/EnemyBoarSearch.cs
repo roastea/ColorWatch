@@ -78,23 +78,24 @@ public class EnemyBoarSearch : MonoBehaviour
                     Invoke("getPosition", 3.0f);
                 }
 
+
                 StartCoroutine("Rotate");
 
                 agent.speed = 2;
 
-                if (hit.transform.gameObject == Player && getPos == false)
-                {
-                    AgentSpeedUp();
-                    agent.destination = targetPos;
-                    //AgentStan();
-                    Invoke("AgentSpeedDown", 2.0f);
-                    getPos = true;
-                }
-                else
-                {
-                    AgentSpeedDown();
-                    GotoNextPoint();
-                }
+                //if (hit.transform.gameObject == Player && getPos == false)
+                //{
+                //    AgentSpeedUp();
+                //    agent.destination = targetPos;
+                //    //AgentStan();
+                //    Invoke("AgentSpeedDown", 2.0f);
+                //    getPos = true;
+                //}
+                //else
+                //{
+                //    AgentSpeedDown();
+                //    GotoNextPoint();
+                //}
             }
         }
     }
@@ -140,5 +141,20 @@ public class EnemyBoarSearch : MonoBehaviour
         //Quaternion quaternion = Quaternion.identity;
         enemyBoar.transform.rotation = quaternion;
         yield return new WaitForSeconds(2.0f);
+
+
+        if (hit.transform.gameObject == Player && getPos == false)
+        {
+            AgentSpeedUp();
+            agent.destination = targetPos;
+            //AgentStan();
+            Invoke("AgentSpeedDown", 2.0f);
+            getPos = true;
+        }
+        else
+        {
+            AgentSpeedDown();
+            GotoNextPoint();
+        }
     }
 }

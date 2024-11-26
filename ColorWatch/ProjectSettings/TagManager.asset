@@ -28,8 +28,8 @@ TagManager:
   - EnemyBoar
   - EnemyNormal
   - Player
-  - 
-  - 
+  - Object
+  - EnemyOctopus
   - 
   - 
   - 
