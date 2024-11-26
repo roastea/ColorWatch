@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b54ac0dccd118da45b6d091fcba0edfb
+guid: c91d763e1dd55df498987e8f2f3d6a90
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blue
-    second: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
+      name: around
+    second: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: red
-    second: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
+      name: connection1
+    second: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door1
+    second: {fileID: 2100000, guid: 4f475e5c0a2b5a8448ac56e52b3a1af9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
