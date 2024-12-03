@@ -42,6 +42,7 @@ public class LightPillarManager : MonoBehaviour
         }
     }
 
+    //Œõ‚Ì’Œ‚ÌˆÊ’u‚Ì•ÏX
     public void ChangePillarPoint(GameObject setPillar)
     {
         int index = 0;
