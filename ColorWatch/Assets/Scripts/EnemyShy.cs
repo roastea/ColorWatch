@@ -69,19 +69,19 @@ public class EnemyShy : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "LightPillarShy")
-        {
-            Destroy(this.gameObject);
-            en.kill++;
-            en.killCount.SetText("Enemy : {0} / 10", en.kill);
-            shy++;
-            if (shy == 3)
-            {
-                GameObject gObj = GameObject.Find("LightPillarShy");
-                Destroy(gObj);
-            }
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.name == "LightPillarShy")
+    //    {
+    //        Destroy(this.gameObject);
+    //        en.kill++;
+    //        en.killCount.SetText("Enemy : {0} / 10", en.kill);
+    //        shy++;
+    //        if (shy == 3)
+    //        {
+    //            GameObject gObj = GameObject.Find("LightPillarShy");
+    //            Destroy(gObj);
+    //        }
+    //    }
+    //}
 }
