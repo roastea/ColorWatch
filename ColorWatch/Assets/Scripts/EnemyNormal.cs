@@ -70,19 +70,19 @@ public class EnemyNormal : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "LightPillarNormal")
-        {
-            Destroy(this.gameObject);
-            kill++;
-            killCount.SetText("Enemy : {0} / 10", kill);
-            normal++;
-            if (normal == 2)
-            {
-                GameObject gObj = GameObject.Find("LightPillarNormal");
-                Destroy(gObj);
-            }
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.name == "LightPillarNormal")
+    //    {
+    //        Destroy(this.gameObject);
+    //        kill++;
+    //        killCount.SetText("Enemy : {0} / 10", kill);
+    //        normal++;
+    //        if (normal == 2)
+    //        {
+    //            GameObject gObj = GameObject.Find("LightPillarNormal");
+    //            Destroy(gObj);
+    //        }
+    //    }
+    //}
 }

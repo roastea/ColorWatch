@@ -24,20 +24,20 @@ public class EnemyBoar : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "LightPillarBoar")
-        {
-            Destroy(this.gameObject);
-            en.kill++;
-            en.killCount.SetText("Enemy : {0} / 10", en.kill);
-            boar++;
-            if (boar == 3)
-            {
-                GameObject gObj = GameObject.Find("LightPillarBoar");
-                Destroy(gObj);
-                //material.shader = Shader.Find("Standard");
-            }
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.name == "LightPillarBoar")
+    //    {
+    //        Destroy(this.gameObject);
+    //        en.kill++;
+    //        en.killCount.SetText("Enemy : {0} / 10", en.kill);
+    //        boar++;
+    //        if (boar == 3)
+    //        {
+    //            GameObject gObj = GameObject.Find("LightPillarBoar");
+    //            Destroy(gObj);
+    //            //material.shader = Shader.Find("Standard");
+    //        }
+    //    }
+    //}
 }
