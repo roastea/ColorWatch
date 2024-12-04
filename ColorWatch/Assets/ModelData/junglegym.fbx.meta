@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: a6ee2e80972d37540bb964e09735d9e7
+guid: 3de1b39d4d145784b873466b5b4f2cca
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ball
+    second: {fileID: 2100000, guid: 3f2a4d776b3827b49aa366f0b74fec53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole
+    second: {fileID: 2100000, guid: d4e13aec3707042498aefeaf5e632199, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

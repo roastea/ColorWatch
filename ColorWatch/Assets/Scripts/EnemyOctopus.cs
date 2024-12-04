@@ -16,49 +16,21 @@ public class EnemyOctopus : MonoBehaviour
     public Transform[] points;
     private int destPoint = 0;
     NavMeshAgent agent;
-    bool IsDetected = false;
 
     //Count(kill)
     //public TextMeshProUGUI killCount;
     //public int kill;
 
-    public int normal;
+    public int octopus;
 
     private void Start()
     {
         en = enObj.GetComponent<EnemyNormal>();
-
-        agent = GetComponent<NavMeshAgent>();
-
-        GotoNextPoint();
     }
 
     private void Update()
     {
-        float distance;
-
-        distance = Vector3.Distance(transform.position, player.position);
-
-        if (distance <= detectDistance)
-        {
-            IsDetected = true;
-        }
-        else
-        {
-            IsDetected = false;
-        }
-
-        if (IsDetected)
-        {
-            agent.destination = player.position;
-        }
-        else
-        {
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            {
-                GotoNextPoint();
-            }
-        }
+        GotoNextPoint();
     }
 
     void GotoNextPoint()
