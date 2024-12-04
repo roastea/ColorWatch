@@ -165,7 +165,6 @@ public class EnemyBoarSearch : MonoBehaviour
     [SerializeField] float detectDistance;
     public Transform[] points;
     private int destPoint = 0;
-    //bool IsDetected = false;
 
     //EnemySearch
     public Transform player;
@@ -177,10 +176,9 @@ public class EnemyBoarSearch : MonoBehaviour
     private bool getPos = true;
     private bool doAttack = false;
     private bool looking = true;
+    //private Vector3 detectedPosition; // 検知したプレイヤーの位置
+    private bool isChasing = false; // プレイヤーの位置を追跡中かどうか
 
-
-    private Vector3 detectedPosition; // 検知したプレイヤーの位置
-    //private bool isChasing = false; // プレイヤーの位置を追跡中かどうか
     void Start()
     {
         agent = enemyBoar.GetComponent<NavMeshAgent>();
@@ -225,49 +223,6 @@ public class EnemyBoarSearch : MonoBehaviour
     private void Update()
     {
         playerPos = player.transform.position;
-
-        //if(!agent.pathPending && !looking && doAttack)
-        //{
-        //    doAttack = false;
-        //}
-
-        //float distance = Vector3.Distance(transform.position, player.position);
-
-        //// 検知状態を更新
-        //if (distance <= detectDistance && !isChasing)
-        //{
-        //    IsDetected = true;
-        //    detectedPosition = targetPos; // プレイヤーを検知した瞬間の位置を記録
-        //    isChasing = true; // 追跡状態に遷移
-        //}
-        //else if (!isChasing)
-        //{
-        //    IsDetected = false;
-        //}
-
-        //if (IsDetected)
-        //{
-        //    // 記録した位置に向かう
-        //    RotateTowardsTarget(detectedPosition);
-        //    agent.destination = detectedPosition;
-
-        //    // 到着したら巡回に戻る
-        //    if (!agent.pathPending && agent.remainingDistance < 0.5f)
-        //    {
-        //        //targetPos = playerPos;
-        //        IsDetected = false;
-        //        isChasing = false; // 追跡終了
-        //        GotoNextPoint(); // 巡回再開
-        //    }
-        //}
-        //else
-        //{
-        //    // 巡回処理
-        //    if (!agent.pathPending && agent.remainingDistance < 0.5f)
-        //    {
-        //        GotoNextPoint();
-        //    }
-        //}
     }
 
     private void OnTriggerStay(Collider other) //索敵範囲内に入ってる間
@@ -280,25 +235,15 @@ public class EnemyBoarSearch : MonoBehaviour
 
             if (Physics.Raycast(transform.position, direction, out hit, distance)) //playerがrayの範囲内だったら
             {
-                //if (getPos == true) //到着したらgetPos=trueにしたい
-                //{
-                //    Debug.Log("1");
-
-                //    getPos = false;
-                //    targetPos = playerPos;
-                //}
-
                 if (hit.transform.gameObject == Player) //それがplayerだったら
                 {
-                    Debug.Log("2");
+                    isChasing = true;
 
                     //speed=0
                     //1.5秒間見つめる
 
                     if(looking)
                     {
-                        Debug.Log("3");
-
                         AgentStan();
 
                         // 目標の方向を計算（高さを無視）
@@ -314,17 +259,15 @@ public class EnemyBoarSearch : MonoBehaviour
 
                     if (doAttack) //からboolで判定
                     {
-                        if (getPos == true) //到着したらgetPos=trueにしたい
+                        if (getPos == true) //到着したらgetPos=true
                         {
-                            Debug.Log("1");
-
+                            Debug.Log("getPlayerPos");
                             getPos = false;
                             targetPos = playerPos;
                         }
 
                         //speed=10
                         //最終playerがいた位置に向かう
-
 
                         AgentSpeedUp();
                         agent.destination = targetPos;
@@ -336,71 +279,18 @@ public class EnemyBoarSearch : MonoBehaviour
                             AgentStan();
                             Invoke("AgentSpeed", 1.0f);
                             getPos = true;
+                            looking = true;
+                            isChasing = false;
                         }
-
-                        //search = true;
-                        //AgentSpeedUp();
-                        //agent.destination = targetPos;
-                        //Invoke("AgentSpeedDown", 2.0f);S
-                        //getPos = true;
-
                     }
-                    else
-                    {
-
-                    }
-                }
-                else
-                {
-                    //speed=2
-                    //GotoNextPoint();
-
-                    //search = false;
-                    //AgentSpeedDown();
-                    //GotoNextPoint();
                 }
             }
+        }
+        else if(!isChasing)
+        {
+            GotoNextPoint();
         }
     }
-
-    /*private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            //targetPos = playerPos; //player�̌��ݒn�擾
-
-            var diff = playerPos - transform.position;
-            var distance = diff.magnitude;
-            var direction = diff.normalized;
-
-            if (Physics.Raycast(transform.position, direction, out hit, distance))
-            {
-                if (getPos == true)
-                {
-                    getPos = false;
-                    //targetPos = playerPos;
-                }
-
-                //StartCoroutine("Rotate");
-
-                agent.speed = 2;
-
-                if (hit.transform.gameObject == Player && getPos == false)
-                {
-                    AgentSpeedUp();
-                    agent.destination = targetPos;
-                    //AgentStan();
-                    Invoke("AgentSpeedDown", 2.0f);
-                    getPos = true;
-                }
-                else
-                {
-                    AgentSpeedDown();
-                    GotoNextPoint();
-                }
-            }
-        }
-    }*/
 
     void AgentSpeedUp()
     {
@@ -431,13 +321,9 @@ public class EnemyBoarSearch : MonoBehaviour
 
     IEnumerator Attack() //突進
     {
-        Debug.Log("4");
-
         doAttack = false;
 
-        yield return new WaitForSeconds(1.5f);
-
-        Debug.Log("5");
+        yield return new WaitForSeconds(2.0f);
 
         looking = false;
         doAttack = true;
