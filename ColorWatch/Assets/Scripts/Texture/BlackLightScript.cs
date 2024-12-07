@@ -10,15 +10,17 @@ public class BlackLightScript : MonoBehaviour
     public Transform player;
     public float maxAngle = 25f;
     [SerializeField] float powerDown = 0.00005f;
-    //public bool ShyStop = false;
+    [SerializeField] float powerCharge = 0.00005f;
 
     private bool powerOn = false;
+    private bool batteryShort = false;
 
     [SerializeField] private float maxBattery = 100f; //バッテリーの最大値
     private float nowbattery;
 
     public GameObject batteryGauge;
     private Slider batterySlider;
+    public Image BackGroundImage;
 
     //Sound
     AudioSource soundLight;
@@ -59,24 +61,6 @@ public class BlackLightScript : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("EnemyShy"))
-    //    {
-    //        ShyStop = true;
-    //        //Debug.Log("入った");
-    //    }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("EnemyShy"))
-    //    {
-    //        ShyStop = false;
-    //        //Debug.Log("出た");
-    //    }
-    //}
-
     // Update is called once per frame
     void Update()
     {
@@ -99,6 +83,18 @@ public class BlackLightScript : MonoBehaviour
 
                             nowbattery -= powerDown;
                             batterySlider.value = nowbattery;
+
+                            if(nowbattery <= 0) //バッテリーが無くなったら
+                            {
+                                batteryShort = true; //ショートさせる
+                                powerOn = false; //ライトが切れる
+                                lightOnIcon.SetActive(false);
+                                lightOffIcon.SetActive(true);
+
+                                BackGroundImage.color = Color.red;
+
+                                Invoke("FixedBattery", 3.0f);
+                            }
                         }
                         else //ライトOFF
                         {
@@ -107,10 +103,22 @@ public class BlackLightScript : MonoBehaviour
                             material.SetVector("_Position", new Vector4(0, 0, 0, 0));
 
                             material.SetFloat("_MaxAngle", 0);
+
+                            if (!batteryShort) //バッテリー回復(ショートしてない時)
+                            {
+                                nowbattery += powerCharge;
+                                batterySlider.value = nowbattery;
+                            }
                         }
                     }
                 }
             }
         }
+    }
+
+    void FixedBattery()
+    {
+        batteryShort = false;
+        BackGroundImage.color = new Color32(119, 119, 119, 255); //元の色に戻す
     }
 }
