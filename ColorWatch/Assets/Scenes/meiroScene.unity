@@ -2437,6 +2437,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558087352}
   m_CullTransparentMesh: 1
+--- !u!114 &560560708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3882888369494213331, guid: ee42df58adf55a54f9ac365586d20c9d, type: 3}
+  m_PrefabInstance: {fileID: 806238420}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563100524
 GameObject:
   m_ObjectHideFlags: 0
@@ -6490,7 +6501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1317082474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7524,6 +7535,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1870442260227251702, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2380691546305582548, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
       propertyPath: judge
       value: 
@@ -7552,6 +7567,10 @@ PrefabInstance:
       propertyPath: lightOffIcon
       value: 
       objectReference: {fileID: 1802802278}
+    - target: {fileID: 2380691546305582548, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
+      propertyPath: BackGroundImage
+      value: 
+      objectReference: {fileID: 560560708}
     - target: {fileID: 2562585330150761941, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11
