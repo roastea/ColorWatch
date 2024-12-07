@@ -7,14 +7,13 @@ public class LightPillarManager : MonoBehaviour
 {
     [SerializeField] GameObject[] PillarPoint; //スポーン位置を入れる配列
     [SerializeField] GameObject[] LightPillar; //光の柱を入れる配列
+    GameObject nowPillarNormal;
+    GameObject nowPillarShy;
+    GameObject nowPillarBoar;
 
     int rnd; //乱数を入れるint型
-    int nowPillarNormal;
-    int nowPillarShy;
-    int nowPillarBoar;
 
     List<GameObject> PillarList = new List<GameObject>();
-    List<GameObject> nowPillarList = new List<GameObject>();
 
     void Start()
     {
@@ -29,42 +28,42 @@ public class LightPillarManager : MonoBehaviour
         {
             rnd = Random.Range(0, PillarList.Count);
             LightPillar[i].transform.position = PillarList[rnd].transform.position; //位置を変更
-            nowPillarList.Add(PillarList[rnd]); //使用中に追加
 
-            if (LightPillar[i].name == "LightPillarNormal")
-                nowPillarNormal = nowPillarList.IndexOf(PillarList[rnd]); //Normalの柱の場所を記憶
-            else if (LightPillar[i].name == "LightPillarShy")
-                nowPillarShy = nowPillarList.IndexOf(PillarList[rnd]); //Shyの柱の場所を記憶
-            else if (LightPillar[i].name == "LightPillarBoar")
-                nowPillarBoar = nowPillarList.IndexOf(PillarList[rnd]); //Boarの柱の場所を記憶
+            Debug.Log(PillarList[rnd].name);
 
-            PillarList.RemoveAt(rnd); //リストから削除
+            if (LightPillar[i].name == "LightPillarNormal") //Normalの柱の場所を記憶
+                nowPillarNormal = PillarList[rnd];
+            else if (LightPillar[i].name == "LightPillarShy") //Shyの柱の場所を記憶
+                nowPillarShy = PillarList[rnd];
+            else if (LightPillar[i].name == "LightPillarBoar") //Boarの柱の場所を記憶
+                nowPillarBoar = PillarList[rnd];
+
+            PillarList.Remove(PillarList[rnd]); //スポーン位置から削除
         }
     }
 
+    //光の柱の位置の変更
     public void ChangePillarPoint(GameObject setPillar)
     {
-        int index = 0;
-
-        if (setPillar.name == "LightPillarNormal")
-            index = nowPillarNormal;
-        else if (setPillar.name == "LightPillarShy")
-            index = nowPillarShy;
-        else if (setPillar.name == "LightPillarBoar")
-            index = nowPillarBoar;
-
         rnd = Random.Range(0, PillarList.Count);
         setPillar.transform.position = PillarList[rnd].transform.position; //位置を変更
 
-        nowPillarList.Add(PillarList[rnd]); //使用中に追加
-        PillarList.Add(nowPillarList[index]); //元あった位置をスポーン位置に追加
-        nowPillarList.RemoveAt(index); //元あった位置を使用中から削除
-
         if (setPillar.name == "LightPillarNormal")
-            nowPillarNormal = nowPillarList.IndexOf(PillarList[rnd]); //Normalの柱の場所を記憶
+        {
+            PillarList.Add(nowPillarNormal); //元あった柱の場所をスポーン位置に追加
+            nowPillarNormal = PillarList[rnd]; //Normalの柱の場所を記憶
+        }
         else if (setPillar.name == "LightPillarShy")
-            nowPillarShy = nowPillarList.IndexOf(PillarList[rnd]); //Shyの柱の場所を記憶
+        {
+            PillarList.Add(nowPillarShy); //元あった柱の場所をスポーン位置に追加
+            nowPillarShy = PillarList[rnd]; //Shyの柱の場所を記憶
+        }
         else if (setPillar.name == "LightPillarBoar")
-            nowPillarBoar = nowPillarList.IndexOf(PillarList[rnd]); //Boarの柱の場所を記憶
+        {
+            PillarList.Add(nowPillarBoar); //元あった柱の場所をスポーン位置に追加
+            nowPillarBoar = PillarList[rnd]; //Boarの柱の場所を記憶
+        }
+
+        PillarList.Remove(PillarList[rnd]); //新しい柱の位置をスポーン位置から削除
     }
 }
