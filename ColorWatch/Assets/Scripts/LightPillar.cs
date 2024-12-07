@@ -9,7 +9,7 @@ public class LightPillar : MonoBehaviour
     [SerializeField] GameObject LightPillarManager;
 
     int rnd; //乱数を入れるint型
-    public int normal = 0, shy = 0, boar = 0, octopus = 0, tutorial = 0; //敵のカウント
+    [HideInInspector] public int normal = 0, shy = 0, boar = 0, octopus = 0, tutorial = 0; //敵のカウント
 
     List<int> enemyList = new List<int>(); //乱数が重複しないようにリストを使う
 
@@ -36,10 +36,10 @@ public class LightPillar : MonoBehaviour
                 shy++;
             else if (this.gameObject.name == "LightPillarBoar")
                 boar++;
-            //else if (this.gameObject.name == "LightPillarOctopus")
-            //    octopus++;
-            //else
-            //    tutorial++;
+            else if (this.gameObject.name == "LightPillarOctopus")
+                octopus++;
+            else
+                tutorial++;
 
                 if (enemyList.Count > 0)
             {
