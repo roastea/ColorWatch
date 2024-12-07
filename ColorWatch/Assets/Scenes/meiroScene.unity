@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1508,21 +1508,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1347263721}
   m_SourcePrefab: {fileID: 100100000, guid: 87af42d093a56c1458668ce6e63a296c, type: 3}
---- !u!1001 &409898418
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394483842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c962e2d41c6ce409df262d676bc92a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ebObj: {fileID: 786449746}
-  eb: {fileID: 786449748}
-  changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &402222647 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6619637013939102059, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
@@ -2315,14 +2300,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PillarPoint:
   - {fileID: 1747366424}
-  - {fileID: 885223834}
-  - {fileID: 554145779}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 541270686}
-  - {fileID: 710855910}
+  - {fileID: 0}
   LightPillar:
   - {fileID: 1657730026}
-  - {fileID: 237104257}
-  - {fileID: 582288463}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &538834664
 Transform:
   m_ObjectHideFlags: 0
@@ -2367,7 +2352,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1704298094}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &551405961 stripped
 GameObject:
@@ -2480,11 +2465,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 129156450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &582288463 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6873488485445506432, guid: dc4246550e795334caf7aab7f26aa18a, type: 3}
-  m_PrefabInstance: {fileID: 1562260684}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &603101700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 287288980886128278, guid: ee42df58adf55a54f9ac365586d20c9d, type: 3}
@@ -2586,21 +2566,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636139087}
   m_CullTransparentMesh: 1
---- !u!1 &663823059 stripped
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663823059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fd690670f52b394c93d4fac4692dd83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shyObj: {fileID: 1391014892}
-  shy: {fileID: 1391014899}
-  changed: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
 --- !u!1 &676497490
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,6 +6089,54 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8699406968806572376, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 59256826}
+    - targetCorrespondingSourceObject: {fileID: 7609109793652381188, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545965654}
+    - targetCorrespondingSourceObject: {fileID: 3903628122493148671, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1572033393}
+    - targetCorrespondingSourceObject: {fileID: 2047038900629143991, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1419650242}
+    - targetCorrespondingSourceObject: {fileID: 4778380537938893741, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1455012546}
+    - targetCorrespondingSourceObject: {fileID: 5230354600925841344, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 310935233}
+    - targetCorrespondingSourceObject: {fileID: 5740011472763367974, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1416555161}
+    - targetCorrespondingSourceObject: {fileID: 1404008582915039563, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1570328636}
+    - targetCorrespondingSourceObject: {fileID: 5361146975144434232, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1227440984}
+    - targetCorrespondingSourceObject: {fileID: 1012566118203611941, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1523428410}
+    - targetCorrespondingSourceObject: {fileID: 6619637013939102059, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 402222652}
+    - targetCorrespondingSourceObject: {fileID: 518276752270910168, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1499032597}
+    - targetCorrespondingSourceObject: {fileID: 8921862898701500359, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 605009077}
+    - targetCorrespondingSourceObject: {fileID: 5091190070405082459, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1248005575}
+    - targetCorrespondingSourceObject: {fileID: 3696936116284616039, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 303657555}
+    - targetCorrespondingSourceObject: {fileID: 3696936116284616039, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 303657556}
+    - targetCorrespondingSourceObject: {fileID: 7368580776895135320, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1796009019}
     - targetCorrespondingSourceObject: {fileID: 5219429190417291958, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 381932529}
@@ -7367,21 +7380,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8260446706688242679, guid: ee42df58adf55a54f9ac365586d20c9d, type: 3}
   m_PrefabInstance: {fileID: 806238420}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1704298093
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666847127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c962e2d41c6ce409df262d676bc92a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ebObj: {fileID: 786449746}
-  eb: {fileID: 786449748}
-  changed: {fileID: 2100000, guid: bb1a39c9ba5a17d478c627096361c29a, type: 2}
 --- !u!1 &1687907190
 GameObject:
   m_ObjectHideFlags: 0
@@ -7480,15 +7478,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743261171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enObj: {fileID: 1300255972}
-  en: {fileID: 1300255973}
-  changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
+  m_GameObject: {fileID: 1747366424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796009015 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7368580776895135320, guid: 844ea849c77b91a4f962d09407b8591d, type: 3}
@@ -8828,7 +8826,6 @@ SceneRoots:
   - {fileID: 1260542002}
   - {fileID: 946080501}
   - {fileID: 538834664}
-  - {fileID: 1704298094}
   - {fileID: 1073810222}
-  - {fileID: 409898418}
-  - {fileID: 1562260684}
+  - {fileID: 541270687}
+  - {fileID: 1747366425}
