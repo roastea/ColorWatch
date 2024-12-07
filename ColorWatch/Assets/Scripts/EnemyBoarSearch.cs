@@ -36,7 +36,6 @@ public class EnemyBoarSearch : MonoBehaviour
 
         if(!isChasing && !agent.pathPending && agent.remainingDistance < 0.5f)
         {
-            Debug.Log("巡回");
             GotoNextPoint();
         }
     }
@@ -54,7 +53,6 @@ public class EnemyBoarSearch : MonoBehaviour
                 if (hit.transform.gameObject == Player) //それがplayerだったら
                 {
                     isChasing = true;
-                    Debug.Log("true");
 
                     //speed=0
                     //1.5秒間見つめる
@@ -143,7 +141,6 @@ public class EnemyBoarSearch : MonoBehaviour
         getPos = true;
         looking = true;
         isChasing = false;
-        Debug.Log("false");
     }
 
     IEnumerator Attack() //突進

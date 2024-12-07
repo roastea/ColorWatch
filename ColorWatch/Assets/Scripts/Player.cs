@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float limitDash = 15; //ëñÇÈë¨Ç≥ÇÃè„å¿
 
     public GameObject[] lifeArray = new GameObject[3];
+    public GameObject[] damagedlifeArray = new GameObject[3];
     public int life;
 
     private Rigidbody rb;
@@ -34,11 +35,15 @@ public class Player : MonoBehaviour
     private Vector3 playermove;
     private Vector3 playerlook;
 
-    public GameObject staminaGauge;
-    private Slider staminaSlider;
-
+    //Sound
     AudioSource soundWalk;
     AudioSource soundRun;
+
+    //UI
+    public GameObject staminaGauge;
+    private Slider staminaSlider;
+    public GameObject runOnIcon;
+    public GameObject runOffIcon;
 
     void Start()
     {
@@ -51,7 +56,13 @@ public class Player : MonoBehaviour
         staminaSlider.maxValue = maxStamina;
         nowStamina = maxStamina;
 
+        runOnIcon.SetActive(false);
+
         life = 3;
+        for(int i=0; i<life; i++)
+        {
+            damagedlifeArray[i].SetActive(false);
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -88,12 +99,16 @@ public class Player : MonoBehaviour
         {
             //soundRun.Play();
             //soundWalk.Stop();
+            runOnIcon.SetActive(true);
+            runOffIcon.SetActive(false);
             running = true;
         }
         else if (context.canceled)
         {
             //soundRun.Stop();
             //soundWalk.Play();
+            runOnIcon.SetActive(false);
+            runOffIcon.SetActive(true);
             running = false;
         }
 
@@ -221,6 +236,7 @@ public class Player : MonoBehaviour
             Invoke(nameof(SpeedUp), 3.0f); //3ïbå„Ç…playerspeedÇ5Ç…ñﬂÇ∑
             life--;
             lifeArray[life].SetActive(false);
+            damagedlifeArray[life].SetActive(true);
             if (life <= 0)
             {
                 SceneManager.LoadScene("GameOverScene");

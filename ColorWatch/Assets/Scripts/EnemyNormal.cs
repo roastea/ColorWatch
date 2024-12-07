@@ -16,14 +16,12 @@ public class EnemyNormal : MonoBehaviour
     bool IsDetected = false;
 
     //Count(kill)
-    public TextMeshProUGUI killCount;
-    public int kill;
-
+    public TextMeshProUGUI normalKillCount;
     public int normal;
 
     private void Start()
     {
-        kill = 0;
+        normal = 4;
 
         agent = GetComponent<NavMeshAgent>();
 

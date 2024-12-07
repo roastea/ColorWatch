@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LightPillar : MonoBehaviour
 {
-
     [SerializeField] GameObject[] Enemy; //“G‚ð“ü‚ê‚é”z—ñ
     [SerializeField] GameObject LightPillarManager;
 

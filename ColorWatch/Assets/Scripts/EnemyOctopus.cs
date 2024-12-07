@@ -12,7 +12,7 @@ public class EnemyOctopus : MonoBehaviour
 
     //EnemyPatrol
     [SerializeField] Transform player;
-    [SerializeField] float detectDistance;
+    //[SerializeField] float detectDistance;
     public Transform[] points;
     private int destPoint = 0;
     NavMeshAgent agent;
@@ -26,11 +26,20 @@ public class EnemyOctopus : MonoBehaviour
     private void Start()
     {
         en = enObj.GetComponent<EnemyNormal>();
+
+        agent = GetComponent<NavMeshAgent>();
+
+        agent.speed = 5.0f;
+
+        GotoNextPoint();
     }
 
     private void Update()
     {
-        GotoNextPoint();
+        if(!agent.pathPending && agent.remainingDistance < 0.5f)
+        {
+            GotoNextPoint();
+        }
     }
 
     void GotoNextPoint()
@@ -45,19 +54,19 @@ public class EnemyOctopus : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "LightPillarNormal")
-        {
-            Destroy(this.gameObject);
-            en.kill++;
-            en.killCount.SetText("Enemy : {0} / 10", en.kill);
-            en.normal++;
-            if (en.normal == 2)
-            {
-                GameObject gObj = GameObject.Find("LightPillarNormal");
-                Destroy(gObj);
-            }
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.name == "LightPillarNormal")
+    //    {
+    //        Destroy(this.gameObject);
+    //        en.kill++;
+    //        en.killCount.SetText("Enemy : {0} / 10", en.kill);
+    //        octopus++;
+    //        if (octopus == 2)
+    //        {
+    //            GameObject gObj = GameObject.Find("LightPillarNormal");
+    //            Destroy(gObj);
+    //        }
+    //    }
+    //}
 }

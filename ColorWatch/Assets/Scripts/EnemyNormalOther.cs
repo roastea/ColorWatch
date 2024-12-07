@@ -18,12 +18,6 @@ public class EnemyNormalOther : MonoBehaviour
     NavMeshAgent agent;
     bool IsDetected = false;
 
-    //Count(kill)
-    //public TextMeshProUGUI killCount;
-    //public int kill;
-
-    public int normal;
-
     private void Start()
     {
         en = enObj.GetComponent<EnemyNormal>();
@@ -73,19 +67,19 @@ public class EnemyNormalOther : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "LightPillarNormal")
-        {
-            Destroy(this.gameObject);
-            en.kill++;
-            en.killCount.SetText("Enemy : {0} / 10", en.kill);
-            en.normal++;
-            if (en.normal == 2)
-            {
-                GameObject gObj = GameObject.Find("LightPillarNormal");
-                Destroy(gObj);
-            }
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.name == "LightPillarNormal")
+    //    {
+    //        Destroy(this.gameObject);
+    //        en.kill++;
+    //        en.killCount.SetText("Enemy : {0} / 10", en.kill);
+    //        en.normal++;
+    //        if (en.normal == 2)
+    //        {
+    //            GameObject gObj = GameObject.Find("LightPillarNormal");
+    //            Destroy(gObj);
+    //        }
+    //    }
+    //}
 }

@@ -16,9 +16,9 @@ public class ReturnColorNormal : MonoBehaviour
 
     private void Update()
     {
-        if (en.normal == 4)
-        {
-            GetComponent<Renderer>().material = changed;
-        }
+        //if (en.normal == 4)
+        //{
+        //    GetComponent<Renderer>().material = changed;
+        //}
     }
 }
