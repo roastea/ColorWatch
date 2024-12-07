@@ -7,9 +7,6 @@ using TMPro;
 
 public class EnemyShy : MonoBehaviour
 {
-    public GameObject enObj;
-    [SerializeField] EnemyNormal en;
-
     //EnemyPatrol
     [SerializeField] Transform player;
     [SerializeField] float detectDistance;
@@ -18,12 +15,8 @@ public class EnemyShy : MonoBehaviour
     NavMeshAgent agent;
     bool IsDetected = false;
 
-    public int shy;
-
     private void Start()
     {
-        en = enObj.GetComponent<EnemyNormal>();
-
         agent = GetComponent<NavMeshAgent>();
 
         GotoNextPoint();

@@ -15,14 +15,8 @@ public class EnemyNormal : MonoBehaviour
     NavMeshAgent agent;
     bool IsDetected = false;
 
-    //Count(kill)
-    public TextMeshProUGUI normalKillCount;
-    public int normal;
-
     private void Start()
     {
-        normal = 4;
-
         agent = GetComponent<NavMeshAgent>();
 
         GotoNextPoint();
@@ -75,8 +69,8 @@ public class EnemyNormal : MonoBehaviour
     //        Destroy(this.gameObject);
     //        kill++;
     //        killCount.SetText("Enemy : {0} / 10", kill);
-    //        normal++;
-    //        if (normal == 2)
+    //        normal--;
+    //        if (normal == 0)
     //        {
     //            GameObject gObj = GameObject.Find("LightPillarNormal");
     //            Destroy(gObj);

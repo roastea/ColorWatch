@@ -7,26 +7,14 @@ using TMPro;
 
 public class EnemyOctopus : MonoBehaviour
 {
-    public GameObject enObj;
-    [SerializeField] EnemyNormal en;
-
     //EnemyPatrol
     [SerializeField] Transform player;
-    //[SerializeField] float detectDistance;
     public Transform[] points;
     private int destPoint = 0;
     NavMeshAgent agent;
 
-    //Count(kill)
-    //public TextMeshProUGUI killCount;
-    //public int kill;
-
-    public int octopus;
-
     private void Start()
     {
-        en = enObj.GetComponent<EnemyNormal>();
-
         agent = GetComponent<NavMeshAgent>();
 
         agent.speed = 5.0f;

@@ -3,17 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ReturnColor : MonoBehaviour //“G‚Ìc‚è‚Ì”•\¦‚ÆF–ß‚·‚½‚ß‚ÌƒXƒNƒŠƒvƒg
+public class ReturnColor : MonoBehaviour //F–ß‚·‚½‚ß‚ÌƒXƒNƒŠƒvƒg
 {
-    public GameObject enObj;
-    public GameObject ebObj;
-    public GameObject esObj;
-    public GameObject eoObj;
-
-    public EnemyNormal en;
-    public EnemyBoar eb;
-    public EnemyShy es;
-    public EnemyOctopus eo;
+    public GameObject lightPillarObj;
+    public LightPillar lightPillar;
 
     private bool normalFlag = false;
     private bool boarFlag = false;
@@ -27,10 +20,7 @@ public class ReturnColor : MonoBehaviour //“G‚Ìc‚è‚Ì”•\¦‚ÆF–ß‚·‚½‚ß‚ÌƒXƒNƒŠƒ
 
     private void Start()
     {
-        en = enObj.GetComponent<EnemyNormal>();
-        eb = enObj.GetComponent<EnemyBoar>();
-        es = enObj.GetComponent<EnemyShy>();
-        eo = enObj.GetComponent<EnemyOctopus>();
+        lightPillar = lightPillarObj.GetComponent<LightPillar>();
 
         greenMaterial = Resources.Load<Material>("GreenMaterial");
         redMaterial = Resources.Load<Material>("RedMaterial");
@@ -45,27 +35,27 @@ public class ReturnColor : MonoBehaviour //“G‚Ìc‚è‚Ì”•\¦‚ÆF–ß‚·‚½‚ß‚ÌƒXƒNƒŠƒ
 
     private void Update()
     {
-        if (en.normal == 0 && eb.boar == 0 && es.shy == 0 && eo.octopus == 0) //‘S‚Ä‚Ì“G‚ªÁ‚¦‚½‚çƒNƒŠƒA
+        if (lightPillar.normal == 0 && lightPillar.boar == 0 && lightPillar.shy == 0 && lightPillar.octopus == 0) //‘S‚Ä‚Ì“G‚ªÁ‚¦‚½‚çƒNƒŠƒA
         {
             SceneManager.LoadScene("ClearScene");
         }
 
-        if (!normalFlag && en.normal == 0)
+        if (!normalFlag && lightPillar.normal == 0)
         {
             normalFlag = true;
             ReturnColorNormal();
         }
-        if (!boarFlag && eb.boar == 0)
+        if (!boarFlag && lightPillar.boar == 0)
         {
             boarFlag = true;
             ReturnColorBoar();
         }
-        if (!shyFlag && es.shy == 0)
+        if (!shyFlag && lightPillar.shy == 0)
         {
             shyFlag = true;
             ReturnColorShy();
         }
-        if (!octopusFlag && eo.octopus == 0)
+        if (!octopusFlag && lightPillar.octopus == 0)
         {
             octopusFlag = true;
             ReturnColorOctopus();

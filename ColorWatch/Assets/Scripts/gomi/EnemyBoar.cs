@@ -15,8 +15,7 @@ public class EnemyBoar : MonoBehaviour
     private void Start()
     {
         en = enObj.GetComponent<EnemyNormal>();
-        //material.shader = Shader.Find("Unlit/BlackLight");
-        boar = 0;
+        boar = 3;
     }
 
     private void Update()
