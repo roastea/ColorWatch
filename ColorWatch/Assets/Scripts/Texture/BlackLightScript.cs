@@ -9,8 +9,8 @@ public class BlackLightScript : MonoBehaviour
     public Transform judge;
     public Transform player;
     public float maxAngle = 25f;
-    [SerializeField] float powerDown = 0.00005f;
-    [SerializeField] float powerCharge = 0.00005f;
+    [SerializeField] float powerDown = 0.0005f;
+    [SerializeField] float powerCharge = 0.0005f;
 
     private bool powerOn = false;
     private bool batteryShort = false;
@@ -42,7 +42,7 @@ public class BlackLightScript : MonoBehaviour
     public void OnLight(InputAction.CallbackContext context)
     {
 
-        if (context.started)
+        if (context.started && !batteryShort)
         {
             if (!powerOn)
             {
@@ -104,7 +104,7 @@ public class BlackLightScript : MonoBehaviour
 
                             material.SetFloat("_MaxAngle", 0);
 
-                            if (!batteryShort) //バッテリー回復(ショートしてない時)
+                            if (!batteryShort && nowbattery < maxBattery) //バッテリー回復(ショートしてない時)
                             {
                                 nowbattery += powerCharge;
                                 batterySlider.value = nowbattery;
