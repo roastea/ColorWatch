@@ -230,6 +230,7 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && !dameged)
         {
+            Debug.Log(other.name);
             playerspeed = 10;
             dameged = true;
             Invoke(nameof(Invincible), 3.0f); //3•bŒã‚É–³“Gó‘Ô‚ğ–ß‚·
