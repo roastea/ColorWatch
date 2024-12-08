@@ -10,6 +10,7 @@ public class LightPillarManager : MonoBehaviour
     GameObject nowPillarNormal;
     GameObject nowPillarShy;
     GameObject nowPillarBoar;
+    GameObject nowPillarOctopus;
 
     int rnd; //乱数を入れるint型
 
@@ -37,8 +38,10 @@ public class LightPillarManager : MonoBehaviour
                 nowPillarShy = PillarList[rnd];
             else if (LightPillar[i].name == "LightPillarBoar") //Boarの柱の場所を記憶
                 nowPillarBoar = PillarList[rnd];
+            else if (LightPillar[i].name == "LightPillarOctopus") //Octopusの柱の場所を記憶
+                nowPillarOctopus = PillarList[rnd];
 
-            PillarList.Remove(PillarList[rnd]); //スポーン位置から削除
+                PillarList.Remove(PillarList[rnd]); //スポーン位置から削除
         }
     }
 
@@ -62,6 +65,11 @@ public class LightPillarManager : MonoBehaviour
         {
             PillarList.Add(nowPillarBoar); //元あった柱の場所をスポーン位置に追加
             nowPillarBoar = PillarList[rnd]; //Boarの柱の場所を記憶
+        }
+        else if (setPillar.name == "LightPillarOctopus")
+        {
+            PillarList.Add(nowPillarOctopus);  //元あった柱の場所をスポーン位置に追加
+            nowPillarOctopus = PillarList[rnd]; //Octopusの柱の場所を記憶
         }
 
         PillarList.Remove(PillarList[rnd]); //新しい柱の位置をスポーン位置から削除

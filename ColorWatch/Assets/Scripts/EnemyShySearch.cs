@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Video;
 
 public class EnemyShySearch : MonoBehaviour
 {
     //EnemyPatrol
+    NavMeshAgent agent;
+
+    //[SerializeField] float detectDistance;
     //public Transform[] points;
     //private int destPoint = 0;
 
@@ -14,7 +19,6 @@ public class EnemyShySearch : MonoBehaviour
     public Transform player;
     //public Transform ebPos;
     public GameObject enemyShy;
-    NavMeshAgent agent;
     private RaycastHit hit;
     private Vector3 playerPos;
     private Vector3 target;
@@ -22,11 +26,14 @@ public class EnemyShySearch : MonoBehaviour
     //public GameObject blacklightobject;
     //[SerializeField] BlackLightScript blacklightscript;
 
-    private bool ShyStop = false;
+    private bool playerLook = false; //プレイヤーが見てるかどうか
+    private bool shyLook = false; //Shyの視界の範囲か
+
 
     void Start()
     {
         agent = enemyShy.GetComponent<NavMeshAgent>();
+
         //blacklightscript = blacklightobject.GetComponent<BlackLightScript>();
     }
 
@@ -37,11 +44,12 @@ public class EnemyShySearch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("BlackLight"))
+        if (other.CompareTag("BlackLight") && shyLook)
         {
-            ShyStop = true;
+            playerLook = true;
             //Debug.Log("入った");
             agent.speed = 0;
+            agent.angularSpeed = 0;
         }
     }
 
@@ -49,7 +57,7 @@ public class EnemyShySearch : MonoBehaviour
     {
         if (other.CompareTag("BlackLight"))
         {
-            ShyStop = false;
+            playerLook = false;
             //Debug.Log("出た");
             agent.speed = 3;
         }
@@ -57,7 +65,7 @@ public class EnemyShySearch : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(ShyStop)
+        if(playerLook && shyLook)
         {
             //agent.speed = 0;
         }
@@ -80,11 +88,14 @@ public class EnemyShySearch : MonoBehaviour
                     if (hit.transform.gameObject == player) //反応してない
                     {
                         Debug.Log("touch!");
+                        shyLook = true;
+
                         agent.destination = target;
                         agent.speed = 3;
                     }
                     else
                     {
+                        shyLook = false;
                         //GotoNextPoint();
                     }
                 }

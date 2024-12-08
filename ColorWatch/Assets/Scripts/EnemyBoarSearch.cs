@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Video;
 
 public class EnemyBoarSearch : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class EnemyBoarSearch : MonoBehaviour
     private bool looking = true;
     private bool isChasing = false; // プレイヤーの位置を追跡中かどうか
 
+    //FrameEffect
+    [SerializeField] GameObject FrameEffect;
+    bool EffectFlag = false;
+
     void Start()
     {
         agent = enemyBoar.GetComponent<NavMeshAgent>();
@@ -36,6 +41,13 @@ public class EnemyBoarSearch : MonoBehaviour
 
         if(!isChasing && !agent.pathPending && agent.remainingDistance < 0.5f)
         {
+            //FreameEffectのスクリプトに飛んでエフェクトを終了
+            if (EffectFlag)
+            {
+                FrameEffect.GetComponent<FrameEffect>().StopEffect();
+                EffectFlag = false;
+            }
+
             GotoNextPoint();
         }
     }
@@ -52,6 +64,13 @@ public class EnemyBoarSearch : MonoBehaviour
             {
                 if (hit.transform.gameObject == Player) //それがplayerだったら
                 {
+                    //FreameEffectのスクリプトに飛んでエフェクトを再生
+                    if (!EffectFlag)
+                    {
+                        FrameEffect.GetComponent<FrameEffect>().PlayEffect();
+                        EffectFlag = true;
+                    }
+
                     isChasing = true;
 
                     //speed=0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+using UnityEngine.Video;
 //using UnityEditor.SearchService;
 
 public class EnemyShy : MonoBehaviour
@@ -14,6 +15,10 @@ public class EnemyShy : MonoBehaviour
     private int destPoint = 0;
     NavMeshAgent agent;
     bool IsDetected = false;
+
+    //FrameEffect
+    [SerializeField] GameObject FrameEffect;
+    bool EffectFlag = false;
 
     private void Start()
     {
@@ -39,10 +44,24 @@ public class EnemyShy : MonoBehaviour
 
         if (IsDetected)
         {
+            //FreameEffectのスクリプトに飛んでエフェクトを再生
+            if (!EffectFlag)
+            {
+                FrameEffect.GetComponent<FrameEffect>().PlayEffect();
+                EffectFlag = true;
+            }
+
             agent.destination = player.position;
         }
         else
         {
+            //FreameEffectのスクリプトに飛んでエフェクトを終了
+            if (EffectFlag)
+            {
+                FrameEffect.GetComponent<FrameEffect>().StopEffect();
+                EffectFlag = false;
+            }
+
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
             {
                 GotoNextPoint();
