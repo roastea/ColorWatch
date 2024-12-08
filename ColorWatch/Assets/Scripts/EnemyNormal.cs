@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+using Unity.VisualScripting;
 //using UnityEditor.SearchService;
 
 public class EnemyNormal : MonoBehaviour
@@ -95,4 +96,14 @@ public class EnemyNormal : MonoBehaviour
     //        }
     //    }
     //}
+
+    //やられる時エフェクトを止める
+    public void DestroyEffect()
+    {
+        if (EffectFlag)
+        {
+            //FreameEffectのスクリプトに飛んでエフェクトを終了
+            FrameEffect.GetComponent<FrameEffect>().StopEffect();
+        }
+    }
 }
