@@ -42,7 +42,7 @@ public class BlackLightScript : MonoBehaviour
     public void OnLight(InputAction.CallbackContext context)
     {
 
-        if (context.started)
+        if (context.started && !batteryShort)
         {
             if (!powerOn)
             {

@@ -15,6 +15,10 @@ public class EnemyNormal : MonoBehaviour
     NavMeshAgent agent;
     bool IsDetected = false;
 
+    //FrameEffect
+    [SerializeField] GameObject FrameEffect;
+    bool EffectFlag = false;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -39,10 +43,24 @@ public class EnemyNormal : MonoBehaviour
 
         if (IsDetected)
         {
+            if (!EffectFlag)
+            {
+                //FreameEffectのスクリプトに飛んでエフェクトを再生
+                FrameEffect.GetComponent<FrameEffect>().PlayEffect();
+                EffectFlag = true;
+            }
+
             agent.destination = player.position;
         }
         else
         {
+            if (EffectFlag)
+            {
+                //FreameEffectのスクリプトに飛んでエフェクトを終了
+                FrameEffect.GetComponent<FrameEffect>().StopEffect();
+                EffectFlag = false;
+            }
+
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
             {
                 GotoNextPoint();
