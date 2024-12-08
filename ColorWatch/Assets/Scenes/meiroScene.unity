@@ -8050,6 +8050,7 @@ MonoBehaviour:
   - {fileID: 1332818112}
   - {fileID: 737200771}
   - {fileID: 2072047604}
+  FrameEffect: {fileID: 404213356}
 --- !u!95 &1391014900
 Animator:
   serializedVersion: 5
@@ -8071,7 +8072,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
-  FrameEffect: {fileID: 404213356}
 --- !u!1 &1426156752
 GameObject:
   m_ObjectHideFlags: 0
