@@ -4723,7 +4723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1909896838}
-  detectDistance: 15
+  detectDistance: 10
   points:
   - {fileID: 1682236839}
   - {fileID: 47642204}
@@ -7420,7 +7420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1909896838}
-  detectDistance: 15
+  detectDistance: 10
   points:
   - {fileID: 1235480749}
   - {fileID: 383850170}
@@ -10692,7 +10692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1909896838}
-  detectDistance: 15
+  detectDistance: 10
   points:
   - {fileID: 1557162401}
   - {fileID: 361316135}
