@@ -96,4 +96,14 @@ public class EnemyShy : MonoBehaviour
     //        }
     //    }
     //}
+
+    //やられる時エフェクトを止める
+    public void DestroyEffect()
+    {
+        if (EffectFlag)
+        {
+            //FreameEffectのスクリプトに飛んでエフェクトを終了
+            FrameEffect.GetComponent<FrameEffect>().StopEffect();
+        }
+    }
 }

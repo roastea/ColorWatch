@@ -40,24 +40,31 @@ public class LightPillar : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             rnd = Random.Range(0, enemyList.Count); //ランダムな要素を取得
-            Destroy(Enemy[enemyList[rnd]]); //オブジェクトを削除
-            enemyList.RemoveAt(rnd); //リストから削除
 
             //柱の名前「LightPillarNormal」などで倒した敵のカウントを増やす
             if (this.gameObject.name == "LightPillarNormal")
             {
                 normal--;
                 normalKillCount.SetText("×{0}", normal);
+
+                //EnemyNormalに飛んでエフェクトを止める
+                Enemy[enemyList[rnd]].GetComponent<EnemyNormal>().DestroyEffect();
             }
             else if (this.gameObject.name == "LightPillarShy")
             {
                 shy--;
                 shyKillCount.SetText("×{0}", shy);
+
+                //EnemyShyに飛んでエフェクトを止める
+                Enemy[enemyList[rnd]].GetComponent<EnemyShy>().DestroyEffect();
             }
             else if (this.gameObject.name == "LightPillarBoar")
             {
                 boar--;
                 boarKillCount.SetText("×{0}", boar);
+
+                //EnemyBoarSearchに飛んでエフェクトを止める
+                Enemy[enemyList[rnd]].GetComponentInChildren<EnemyBoarSearch>().DestroyEffect();
             }
             else if (this.gameObject.name == "LightPillarOctopus")
             {
@@ -69,6 +76,9 @@ public class LightPillar : MonoBehaviour
                 tutorial--;
                 tutorialKillCount.SetText("×{0}", tutorial);
             }
+
+            Destroy(Enemy[enemyList[rnd]]); //敵を削除
+            enemyList.RemoveAt(rnd); //リストから削除
 
             if (enemyList.Count > 0)
             {
