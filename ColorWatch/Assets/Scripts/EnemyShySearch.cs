@@ -26,7 +26,7 @@ public class EnemyShySearch : MonoBehaviour
     //public GameObject blacklightobject;
     //[SerializeField] BlackLightScript blacklightscript;
 
-    private bool playerLook = false; //プレイヤーが見てるかどうか
+    public bool playerLook = false; //プレイヤーが見てるかどうか
     private bool shyLook = false; //Shyの視界の範囲か
 
 
@@ -47,7 +47,7 @@ public class EnemyShySearch : MonoBehaviour
         if (other.CompareTag("BlackLight") && shyLook)
         {
             playerLook = true;
-            //Debug.Log("入った");
+            Debug.Log("入った");
             agent.speed = 0;
             agent.angularSpeed = 0;
         }
@@ -67,11 +67,11 @@ public class EnemyShySearch : MonoBehaviour
     {
         if(playerLook && shyLook)
         {
-            //agent.speed = 0;
+            agent.speed = 0;
         }
         else
         {
-            //agent.speed = 3;
+            agent.speed = 3;
 
             if (other.CompareTag("Player")) //ok
             {
