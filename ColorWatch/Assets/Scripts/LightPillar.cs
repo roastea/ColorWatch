@@ -22,7 +22,11 @@ public class LightPillar : MonoBehaviour
 
     private void Awake()
     {
+        normal = 3;
         shy = 3;
+        boar = 3;
+        octopus = 3;
+        tutorial = 1;
     }
 
     void Start()
