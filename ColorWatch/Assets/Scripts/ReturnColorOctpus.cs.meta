@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c5c46e20eca3d374fad44fb6a757394b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lightPillarObj: {instanceID: 0}
+  - lightPillarScript: {instanceID: 0}
+  - changed: {fileID: 2100000, guid: 4f475e5c0a2b5a8448ac56e52b3a1af9, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

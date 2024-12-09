@@ -9,7 +9,7 @@ public class LightPillar : MonoBehaviour
     [SerializeField] GameObject LightPillarManager;
 
     int rnd; //乱数を入れるint型
-    [HideInInspector] public int normal = 3, shy = 3, boar = 3, octopus = 3, tutorial = 3; //敵のカウント
+    [HideInInspector] public int normal = 3, shy = 3, boar = 3, octopus = 3, tutorial = 1; //敵のカウント
 
     List<int> enemyList = new List<int>(); //乱数が重複しないようにリストを使う
 
@@ -18,10 +18,17 @@ public class LightPillar : MonoBehaviour
     public TextMeshProUGUI shyKillCount;
     public TextMeshProUGUI boarKillCount;
     public TextMeshProUGUI octopusKillCount;
-    //public TextMeshProUGUI tutorialKillCount;
+    public TextMeshProUGUI tutorialKillCount;
+
+    private void Awake()
+    {
+        shy = 3;
+    }
 
     void Start()
     {
+        Debug.Log(shy);
+
         for (int i = 0; i < Enemy.Length; i++)
         {
             enemyList.Add(i);
@@ -60,7 +67,7 @@ public class LightPillar : MonoBehaviour
             else
             {
                 tutorial--;
-                //tutorialKillCount.SetText("×{0}", tutorial);
+                tutorialKillCount.SetText("×{0}", tutorial);
             }
 
             if (enemyList.Count > 0)

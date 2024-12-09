@@ -3,7 +3,10 @@ guid: d4b4b82df2239d945adec7a00992406b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - lightPillarObj: {instanceID: 0}
+  - lightPillarScript: {instanceID: 0}
+  - changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
