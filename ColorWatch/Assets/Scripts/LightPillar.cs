@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LightPillar : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class LightPillar : MonoBehaviour
     [SerializeField] GameObject LightPillarManager;
 
     int rnd; //乱数を入れるint型
-    [HideInInspector] public int normal = 3, shy = 3, boar = 3, octopus = 3, tutorial = 1; //敵のカウント
+    [HideInInspector] public int normal = 3; //敵のカウント
+    [HideInInspector] public int shy = 3;
+    [HideInInspector] public int boar = 3;
+    [HideInInspector] public int octopus = 3;
+    [HideInInspector] public int tutorial = 1;
 
     List<int> enemyList = new List<int>(); //乱数が重複しないようにリストを使う
 
@@ -31,8 +36,6 @@ public class LightPillar : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(shy);
-
         for (int i = 0; i < Enemy.Length; i++)
         {
             enemyList.Add(i);
@@ -91,6 +94,11 @@ public class LightPillar : MonoBehaviour
             else
             {
                 Destroy(this.gameObject);
+            }
+
+            if (normal == 0 && boar == 0 && shy == 0 && octopus == 0 && tutorial == 0) //全ての敵が消えたらクリア
+            {
+                SceneManager.LoadScene("ClearScene");
             }
         }
     }

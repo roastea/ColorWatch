@@ -6,22 +6,22 @@ using TMPro;
 
 public class EnemyBoar : MonoBehaviour
 {
-    public GameObject enObj;
-    [SerializeField] EnemyNormal en;
-    //[SerializeField] Material material;
+    //public GameObject enObj;
+    //[SerializeField] EnemyNormal en;
+    ////[SerializeField] Material material;
 
-    public int boar;
+    //public int boar;
 
-    private void Start()
-    {
-        en = enObj.GetComponent<EnemyNormal>();
-        boar = 3;
-    }
+    //private void Start()
+    //{
+    //    en = enObj.GetComponent<EnemyNormal>();
+    //    boar = 3;
+    //}
 
-    private void Update()
-    {
+    //private void Update()
+    //{
 
-    }
+    //}
 
     //void OnTriggerEnter(Collider other)
     //{
