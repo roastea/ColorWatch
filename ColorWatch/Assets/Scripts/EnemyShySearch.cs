@@ -34,6 +34,8 @@ public class EnemyShySearch : MonoBehaviour
     {
         agent = enemyShy.GetComponent<NavMeshAgent>();
 
+        agent.speed = 5;
+
         //blacklightscript = blacklightobject.GetComponent<BlackLightScript>();
     }
 
@@ -44,12 +46,12 @@ public class EnemyShySearch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("BlackLight") && shyLook)
+        if (other.CompareTag("BlackLight")) // && shyLook)
         {
             playerLook = true;
             //Debug.Log("ì¸Ç¡ÇΩ");
             agent.speed = 0;
-            agent.angularSpeed = 0;
+            //agent.angularSpeed = 0;
         }
     }
 
@@ -59,7 +61,7 @@ public class EnemyShySearch : MonoBehaviour
         {
             playerLook = false;
             //Debug.Log("èoÇΩ");
-            agent.speed = 3;
+            agent.speed = 5;
         }
     }
 
@@ -71,7 +73,7 @@ public class EnemyShySearch : MonoBehaviour
         }
         else
         {
-            //agent.speed = 3;
+            //agent.speed = 5;
 
             if (other.CompareTag("Player")) //ok
             {
@@ -91,7 +93,7 @@ public class EnemyShySearch : MonoBehaviour
                         shyLook = true;
 
                         agent.destination = target;
-                        agent.speed = 3;
+                        agent.speed = 5;
                     }
                     else
                     {

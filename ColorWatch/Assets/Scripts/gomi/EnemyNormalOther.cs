@@ -7,65 +7,65 @@ using TMPro;
 
 public class EnemyNormalOther : MonoBehaviour
 {
-    public GameObject enObj;
-    [SerializeField] EnemyNormal en;
+    //public GameObject enObj;
+    //[SerializeField] EnemyNormal en;
 
-    //EnemyPatrol
-    [SerializeField] Transform player;
-    [SerializeField] float detectDistance;
-    public Transform[] points;
-    private int destPoint = 0;
-    NavMeshAgent agent;
-    bool IsDetected = false;
+    ////EnemyPatrol
+    //[SerializeField] Transform player;
+    //[SerializeField] float detectDistance;
+    //public Transform[] points;
+    //private int destPoint = 0;
+    //NavMeshAgent agent;
+    //bool IsDetected = false;
 
-    private void Start()
-    {
-        en = enObj.GetComponent<EnemyNormal>();
+    //private void Start()
+    //{
+    //    en = enObj.GetComponent<EnemyNormal>();
 
-        agent = GetComponent<NavMeshAgent>();
+    //    agent = GetComponent<NavMeshAgent>();
 
-        GotoNextPoint();
-    }
+    //    GotoNextPoint();
+    //}
 
-    private void Update()
-    {
-        float distance;
+    //private void Update()
+    //{
+    //    float distance;
 
-        distance = Vector3.Distance(transform.position, player.position);
+    //    distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance <= detectDistance)
-        {
-            IsDetected = true;
-        }
-        else
-        {
-            IsDetected = false;
-        }
+    //    if (distance <= detectDistance)
+    //    {
+    //        IsDetected = true;
+    //    }
+    //    else
+    //    {
+    //        IsDetected = false;
+    //    }
 
-        if (IsDetected)
-        {
-            agent.destination = player.position;
-        }
-        else
-        {
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            {
-                GotoNextPoint();
-            }
-        }
-    }
+    //    if (IsDetected)
+    //    {
+    //        agent.destination = player.position;
+    //    }
+    //    else
+    //    {
+    //        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+    //        {
+    //            GotoNextPoint();
+    //        }
+    //    }
+    //}
 
-    void GotoNextPoint()
-    {
-        if (points.Length == 0)
-        {
-            return;
-        }
+    //void GotoNextPoint()
+    //{
+    //    if (points.Length == 0)
+    //    {
+    //        return;
+    //    }
 
-        agent.destination = points[destPoint].position;
+    //    agent.destination = points[destPoint].position;
 
-        destPoint = (destPoint + 1) % points.Length;
-    }
+    //    destPoint = (destPoint + 1) % points.Length;
+    //}
 
     //void OnTriggerEnter(Collider other)
     //{

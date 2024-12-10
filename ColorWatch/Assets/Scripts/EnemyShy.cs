@@ -8,6 +8,9 @@ using UnityEngine.Video;
 
 public class EnemyShy : MonoBehaviour
 {
+    //public GameObject enemyShySearch;
+    //public EnemyShySearch searchCS;
+
     //EnemyPatrol
     [SerializeField] Transform player;
     [SerializeField] float detectDistance;
@@ -22,6 +25,8 @@ public class EnemyShy : MonoBehaviour
 
     private void Start()
     {
+        //searchCS = enemyShySearch.GetComponent<EnemyShySearch>();
+
         agent = GetComponent<NavMeshAgent>();
 
         GotoNextPoint();
