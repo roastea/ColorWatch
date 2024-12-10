@@ -30,7 +30,7 @@ public class LightPillarManager : MonoBehaviour
             rnd = Random.Range(0, PillarList.Count);
             LightPillar[i].transform.position = PillarList[rnd].transform.position; //ˆÊ’u‚ğ•ÏX
 
-            Debug.Log(PillarList[rnd].name);
+            //Debug.Log(PillarList[rnd].name);
 
             if (LightPillar[i].name == "LightPillarNormal") //Normal‚Ì’Œ‚ÌêŠ‚ğ‹L‰¯
                 nowPillarNormal = PillarList[rnd];
