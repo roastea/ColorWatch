@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &47642203
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &115908412 stripped
@@ -1488,7 +1488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &322535934
@@ -3341,7 +3341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &603101700 stripped
@@ -3573,7 +3573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &676497490
@@ -4846,7 +4846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &852222482
@@ -5455,7 +5455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &946080499
@@ -5903,7 +5903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1001 &1037091258
@@ -6835,7 +6835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &1222636772 stripped
@@ -7726,7 +7726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &1386835192 stripped
@@ -8350,7 +8350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1001 &1513719119
@@ -8364,7 +8364,7 @@ PrefabInstance:
     - target: {fileID: 14219650414755681, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 14219650414755681, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8404,7 +8404,7 @@ PrefabInstance:
     - target: {fileID: 72589184144758726, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 72589184144758726, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8480,7 +8480,7 @@ PrefabInstance:
     - target: {fileID: 326862128992298749, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 326862128992298749, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8560,7 +8560,7 @@ PrefabInstance:
     - target: {fileID: 487527028653569678, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 487527028653569678, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8612,7 +8612,7 @@ PrefabInstance:
     - target: {fileID: 763408633530132597, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 763408633530132597, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8668,7 +8668,7 @@ PrefabInstance:
     - target: {fileID: 972405019525443067, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 972405019525443067, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8704,7 +8704,7 @@ PrefabInstance:
     - target: {fileID: 1034151050325278122, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 1034151050325278122, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8756,7 +8756,7 @@ PrefabInstance:
     - target: {fileID: 1138571648522529729, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 1138571648522529729, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8836,7 +8836,7 @@ PrefabInstance:
     - target: {fileID: 1371687015418222415, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 1371687015418222415, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8856,7 +8856,7 @@ PrefabInstance:
     - target: {fileID: 1398431292358456615, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 1398431292358456615, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8900,7 +8900,7 @@ PrefabInstance:
     - target: {fileID: 1540684588605241160, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 1540684588605241160, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8980,7 +8980,7 @@ PrefabInstance:
     - target: {fileID: 1897008508606159048, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 1897008508606159048, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -8996,7 +8996,7 @@ PrefabInstance:
     - target: {fileID: 1911082284952539429, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 1911082284952539429, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -9032,7 +9032,7 @@ PrefabInstance:
     - target: {fileID: 2022157007892789667, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 2022157007892789667, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -9052,7 +9052,7 @@ PrefabInstance:
     - target: {fileID: 2065432654319432837, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 2065432654319432837, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -9172,7 +9172,7 @@ PrefabInstance:
     - target: {fileID: 2325928471805878803, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 2325928471805878803, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -9320,7 +9320,7 @@ PrefabInstance:
     - target: {fileID: 3057744718131090164, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 3057744718131090164, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -9480,7 +9480,7 @@ PrefabInstance:
     - target: {fileID: 3270270619421604085, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 3270270619421604085, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -9516,7 +9516,7 @@ PrefabInstance:
     - target: {fileID: 3390276247244821823, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 3390276247244821823, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -9584,7 +9584,7 @@ PrefabInstance:
     - target: {fileID: 3693421113652862384, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 3693421113652862384, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -10028,7 +10028,7 @@ PrefabInstance:
     - target: {fileID: 4990318595686242948, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 4990318595686242948, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -10060,7 +10060,7 @@ PrefabInstance:
     - target: {fileID: 5151402067714963920, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 5151402067714963920, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -10336,7 +10336,7 @@ PrefabInstance:
     - target: {fileID: 5874649382081003187, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 5874649382081003187, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -10384,7 +10384,7 @@ PrefabInstance:
     - target: {fileID: 6127258594856997672, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 6127258594856997672, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -10568,7 +10568,7 @@ PrefabInstance:
     - target: {fileID: 6637375330240719627, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 6637375330240719627, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -11056,7 +11056,7 @@ PrefabInstance:
     - target: {fileID: 8029703808493523339, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 8029703808493523339, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -11144,7 +11144,7 @@ PrefabInstance:
     - target: {fileID: 8201333460074411034, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 8201333460074411034, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -11204,7 +11204,7 @@ PrefabInstance:
     - target: {fileID: 8336308072481704022, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 8336308072481704022, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -11376,7 +11376,7 @@ PrefabInstance:
     - target: {fileID: 8728449956428422251, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2068754797}
+      objectReference: {fileID: 7578316661062796872}
     - target: {fileID: 8728449956428422251, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
@@ -12469,7 +12469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &1643856451
@@ -12698,7 +12698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &1772444675 stripped
@@ -13746,7 +13746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2380691546305582548, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
       propertyPath: powerDown
-      value: 0
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 2380691546305582548, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
       propertyPath: runOffIcon
@@ -15662,104 +15662,17 @@ MonoBehaviour:
   lightPillarObj: {fileID: 2324570070633609639}
   lightPillarScript: {fileID: 1348706692951777845}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
---- !u!1001 &2068754796
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108386178389765769, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658630597653976322, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9d9c86d3666104845805cb0dbd175d6d, type: 2}
-    - target: {fileID: 7578316663064114980, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_Name
-      value: LightPillarTutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 7578316663064114980, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7578316663064114980, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2068754798}
-  m_SourcePrefab: {fileID: 100100000, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
---- !u!1 &2068754797 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7578316663064114980, guid: 4aadec0df538fb540b392135a68e5a8c, type: 3}
-  m_PrefabInstance: {fileID: 2068754796}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2068754798
+--- !u!114 &2068754798 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6895338951948869925, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+  m_PrefabInstance: {fileID: 3578772666401420409}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068754797}
+  m_GameObject: {fileID: 7578316661062796872}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fc5024caa419954e98d6d60c9c7cc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy:
-  - {fileID: 1880399489}
-  LightPillarManager: {fileID: 538834662}
-  normal: 3
-  shy: 3
-  boar: 3
-  octopus: 3
-  tutorial: 1
-  normalKillCount: {fileID: 676497492}
-  shyKillCount: {fileID: 916691936}
-  boarKillCount: {fileID: 1996297980}
-  octopusKillCount: {fileID: 923048913}
-  tutorialKillCount: {fileID: 852518499}
 --- !u!1 &2072047603
 GameObject:
   m_ObjectHideFlags: 0
@@ -15919,7 +15832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f487a8b333dd24898262d9ec3e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2068754797}
+  lightPillarObj: {fileID: 7578316661062796872}
   lightPillarScript: {fileID: 2068754798}
   changed: {fileID: 2100000, guid: 30e360f1772a2844ea307c5198593211, type: 2}
 --- !u!1 &2136297014
@@ -16146,6 +16059,91 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3007562446215297917, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
   m_PrefabInstance: {fileID: 1909896833}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3578772666401420409
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838300839705252777, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: m_Name
+      value: LightPillarTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895338951948869925, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: shyKillCount
+      value: 
+      objectReference: {fileID: 916691936}
+    - target: {fileID: 6895338951948869925, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: boarKillCount
+      value: 
+      objectReference: {fileID: 1996297980}
+    - target: {fileID: 6895338951948869925, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: normalKillCount
+      value: 
+      objectReference: {fileID: 676497492}
+    - target: {fileID: 6895338951948869925, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: octopusKillCount
+      value: 
+      objectReference: {fileID: 923048913}
+    - target: {fileID: 6895338951948869925, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: tutorialKillCount
+      value: 
+      objectReference: {fileID: 852518499}
+    - target: {fileID: 6895338951948869925, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: LightPillarManager
+      value: 
+      objectReference: {fileID: 538834662}
+    - target: {fileID: 6895338951948869925, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+      propertyPath: Enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 1880399489}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
 --- !u!1 &4447272600526820823 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4447272601099819138, guid: ee50032d5627181408e8b75b0576166a, type: 3}
@@ -16210,6 +16208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc5024caa419954e98d6d60c9c7cc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7578316661062796872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2838300839705252777, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
+  m_PrefabInstance: {fileID: 3578772666401420409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -16240,4 +16243,4 @@ SceneRoots:
   - {fileID: 576408917}
   - {fileID: 459378181}
   - {fileID: 536724768631171169}
-  - {fileID: 2068754796}
+  - {fileID: 3578772666401420409}
