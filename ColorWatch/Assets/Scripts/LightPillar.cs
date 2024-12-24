@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LightPillar : MonoBehaviour
 {
@@ -94,11 +93,6 @@ public class LightPillar : MonoBehaviour
             else
             {
                 Destroy(this.gameObject);
-            }
-
-            if (normal == 0 && boar == 0 && shy == 0 && octopus == 0 && tutorial == 0) //‘S‚Ä‚Ì“G‚ªÁ‚¦‚½‚çƒNƒŠƒA
-            {
-                SceneManager.LoadScene("ClearScene");
             }
         }
     }

@@ -14235,6 +14235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1923946100}
+  - component: {fileID: 1923946101}
   m_Layer: 5
   m_Name: EnemyCount
   m_TagString: Untagged
@@ -14266,6 +14267,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1923946101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923946099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816e6ee6aee1d63408d1bec0d89670e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalText: {fileID: 676497492}
+  shyText: {fileID: 916691936}
+  boarText: {fileID: 1996297980}
+  octopusText: {fileID: 923048913}
+  tutorialText: {fileID: 852518499}
 --- !u!1001 &1924201582
 PrefabInstance:
   m_ObjectHideFlags: 0
