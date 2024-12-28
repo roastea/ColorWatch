@@ -18,6 +18,12 @@ public class CountEnemyFromText : MonoBehaviour
     private string octopus;
     private string tutorial;
 
+    private bool normalSound = false;
+    private bool shySound = false;
+    private bool boarSound = false;
+    private bool octopusSound = false;
+    private bool tutorialSound = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +36,12 @@ public class CountEnemyFromText : MonoBehaviour
         if (normal == "Å~0" && shy == "Å~0" && boar == "Å~0" && octopus == "Å~0" && tutorial == "Å~0")
         {
             SceneManager.LoadScene("ClearScene");
+        }
+
+        if(normal == "Å~0" && normalSound == false)
+        {
+            normalSound = true;
+
         }
     }
 }

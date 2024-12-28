@@ -643,8 +643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &145783310 stripped
 GameObject:
@@ -916,8 +916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &201021885 stripped
 GameObject:
@@ -936,8 +936,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &203343999 stripped
 GameObject:
@@ -959,6 +959,63 @@ MonoBehaviour:
   lightPillarObj: {fileID: 4447272600526820823}
   lightPillarScript: {fileID: 4447272600526820824}
   changed: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
+--- !u!1001 &205342138
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2324570069559931529, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_Name
+      value: LightPillarNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e73c31e701dcf684fae015905c580668, type: 3}
 --- !u!1 &205499752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,8 +1576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &329353274 stripped
 GameObject:
@@ -1762,8 +1819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &361316134
 GameObject:
@@ -1813,8 +1870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &383850169
 GameObject:
@@ -1864,8 +1921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1001 &390421491
 PrefabInstance:
@@ -2042,8 +2099,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &398145218
 GameObject:
@@ -2404,8 +2461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1001 &459378181
 PrefabInstance:
@@ -2421,7 +2478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4466623027230652304, guid: dc4246550e795334caf7aab7f26aa18a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4466623027230652304, guid: dc4246550e795334caf7aab7f26aa18a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2977,7 +3034,7 @@ MonoBehaviour:
   - {fileID: 2009086983}
   - {fileID: 1623627708}
   LightPillar:
-  - {fileID: 2324570070633609639}
+  - {fileID: 0}
   - {fileID: 4447272600526820823}
   - {fileID: 6873488485296511877}
   - {fileID: 5907313575173895984}
@@ -3038,8 +3095,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &558087352
 GameObject:
@@ -3205,7 +3262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761241848912395304, guid: ee50032d5627181408e8b75b0576166a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4761241848912395304, guid: ee50032d5627181408e8b75b0576166a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3397,8 +3454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &636139087
 GameObject:
@@ -3687,8 +3744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &699262794 stripped
 GameObject:
@@ -3727,8 +3784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &709054362
 GameObject:
@@ -3891,8 +3948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &747630182
 GameObject:
@@ -4187,8 +4244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1001 &806238420
 PrefabInstance:
@@ -4991,8 +5048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &892007225 stripped
 GameObject:
@@ -5395,8 +5452,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &945112383 stripped
 GameObject:
@@ -5498,8 +5555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &957795580
 GameObject:
@@ -5549,8 +5606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &965436609
 GameObject:
@@ -5803,8 +5860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &998863675 stripped
 GameObject:
@@ -5843,8 +5900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1019850602 stripped
 GameObject:
@@ -6124,8 +6181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1059543821 stripped
 GameObject:
@@ -6184,8 +6241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1073152182 stripped
 GameObject:
@@ -6207,115 +6264,6 @@ MonoBehaviour:
   lightPillarObj: {fileID: 4447272600526820823}
   lightPillarScript: {fileID: 4447272600526820824}
   changed: {fileID: 2100000, guid: 96f892d55c6faf34a8a24ee49e624eda, type: 2}
---- !u!1001 &1073810222
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: lpMn
-      value: 
-      objectReference: {fileID: 538834663}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: shyKillCount
-      value: 
-      objectReference: {fileID: 916691936}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: boarKillCount
-      value: 
-      objectReference: {fileID: 1996297980}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: normalKillCount
-      value: 
-      objectReference: {fileID: 676497492}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: Enemy.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: octopusKillCount
-      value: 
-      objectReference: {fileID: 923048913}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: LightPillarManager
-      value: 
-      objectReference: {fileID: 538834662}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: lightPillarManager
-      value: 
-      objectReference: {fileID: 538834662}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: Enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 1300255972}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: Enemy.Array.data[1]
-      value: 
-      objectReference: {fileID: 2038943888}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: Enemy.Array.data[2]
-      value: 
-      objectReference: {fileID: 1037091259}
-    - target: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: Enemy.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2324570069559931529, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_Name
-      value: LightPillarNormal
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -16.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221266086596438948, guid: e73c31e701dcf684fae015905c580668, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e73c31e701dcf684fae015905c580668, type: 3}
 --- !u!1001 &1076905293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6775,8 +6723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1218942805 stripped
 GameObject:
@@ -6815,8 +6763,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1232774438 stripped
 GameObject:
@@ -6948,8 +6896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1258502914
 GameObject:
@@ -7576,8 +7524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1001 &1368766730
 PrefabInstance:
@@ -7706,8 +7654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1001 &1391014891
 PrefabInstance:
@@ -8144,8 +8092,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1473040350 stripped
 GameObject:
@@ -8290,8 +8238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1499582658 stripped
 GameObject:
@@ -8596,11 +8544,11 @@ PrefabInstance:
     - target: {fileID: 792668191302959372, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 792668191302959372, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 792668191302959372, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -8813,6 +8761,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1397886799553252508, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1398431292358456615, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
@@ -8969,6 +8921,10 @@ PrefabInstance:
       propertyPath: lightPillarManagerScript
       value: 
       objectReference: {fileID: 538834663}
+    - target: {fileID: 1922598225541748840, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1928474628445502236, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -9116,11 +9072,11 @@ PrefabInstance:
     - target: {fileID: 2291158844700068233, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 2291158844700068233, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 2291158844700068233, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -9524,11 +9480,11 @@ PrefabInstance:
     - target: {fileID: 3507553311648820623, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 3507553311648820623, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 3507553311648820623, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -9628,11 +9584,11 @@ PrefabInstance:
     - target: {fileID: 3800732550969369207, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 3800732550969369207, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 3800732550969369207, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -9680,11 +9636,11 @@ PrefabInstance:
     - target: {fileID: 3869500141855843775, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 3869500141855843775, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 3869500141855843775, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -9772,11 +9728,11 @@ PrefabInstance:
     - target: {fileID: 4136041745916850368, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 4136041745916850368, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 4136041745916850368, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -9953,6 +9909,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4938796176108230202, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4956500492299533513, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -9968,11 +9928,11 @@ PrefabInstance:
     - target: {fileID: 4971459355740508544, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 4971459355740508544, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 4971459355740508544, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -10442,6 +10402,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6410250439823508212, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410250439823508212, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10600,11 +10564,11 @@ PrefabInstance:
     - target: {fileID: 6857480082346912008, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 6857480082346912008, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 6857480082346912008, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -11056,11 +11020,11 @@ PrefabInstance:
     - target: {fileID: 8057861971124349685, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarObj
       value: 
-      objectReference: {fileID: 2324570070633609639}
+      objectReference: {fileID: 0}
     - target: {fileID: 8057861971124349685, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarScript
       value: 
-      objectReference: {fileID: 1348706692951777845}
+      objectReference: {fileID: 0}
     - target: {fileID: 8057861971124349685, guid: 3454d3bccb33ec74d9870daab123680c, type: 3}
       propertyPath: lightPillarManagerObj
       value: 
@@ -12139,8 +12103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1557162400
 GameObject:
@@ -12541,8 +12505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1709400891
 GameObject:
@@ -12592,8 +12556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1715087036 stripped
 GameObject:
@@ -12632,8 +12596,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1767354748 stripped
 GameObject:
@@ -12692,8 +12656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1779733248 stripped
 GameObject:
@@ -13099,8 +13063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1829076617
 GameObject:
@@ -13170,8 +13134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1842482559 stripped
 GameObject:
@@ -13210,8 +13174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &1868877627 stripped
 GameObject:
@@ -15631,8 +15595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!114 &2068754798 stripped
 MonoBehaviour:
@@ -15693,8 +15657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &2107238973 stripped
 GameObject:
@@ -15713,8 +15677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4b82df2239d945adec7a00992406b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPillarObj: {fileID: 2324570070633609639}
-  lightPillarScript: {fileID: 1348706692951777845}
+  lightPillarObj: {fileID: 0}
+  lightPillarScript: {fileID: 0}
   changed: {fileID: 2100000, guid: 48dcd0a8a23b9294ebf791a43e17da94, type: 2}
 --- !u!1 &2115874004 stripped
 GameObject:
@@ -15953,15 +15917,15 @@ PrefabInstance:
       objectReference: {fileID: 1924201583}
     - target: {fileID: 3512428754613745665, guid: ffc538363714f4045aa1de05a79a2dff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.2
+      value: 17.2
       objectReference: {fileID: 0}
     - target: {fileID: 3512428754613745665, guid: ffc538363714f4045aa1de05a79a2dff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3512428754613745665, guid: ffc538363714f4045aa1de05a79a2dff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.4
+      value: 52.5
       objectReference: {fileID: 0}
     - target: {fileID: 3512428754613745665, guid: ffc538363714f4045aa1de05a79a2dff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16005,22 +15969,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 740105442561589072, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
   m_PrefabInstance: {fileID: 1909896833}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1348706692951777845 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1348706691877972251, guid: e73c31e701dcf684fae015905c580668, type: 3}
-  m_PrefabInstance: {fileID: 1073810222}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2324570070633609639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc5024caa419954e98d6d60c9c7cc03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &2324570070633609639 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2324570069559931529, guid: e73c31e701dcf684fae015905c580668, type: 3}
-  m_PrefabInstance: {fileID: 1073810222}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2562585329367634772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2562585330150761941, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
@@ -16045,7 +15993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 525796934500427050, guid: 93f656e5867a8994ba4130376f814b6e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16211,7 +16159,7 @@ SceneRoots:
   - {fileID: 492086833}
   - {fileID: 538834664}
   - {fileID: 1104439105}
-  - {fileID: 1073810222}
+  - {fileID: 205342138}
   - {fileID: 576408917}
   - {fileID: 459378181}
   - {fileID: 536724768631171169}

@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 6873488485445506432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.7, y: 7, z: 14.9}
-  m_LocalScale: {x: 1, y: 7, z: 1}
+  m_LocalPosition: {x: 11.7, y: 12, z: 14.9}
+  m_LocalScale: {x: 1, y: 14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,3 +125,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   LightPillarManager: {fileID: 0}
+  normal: 3
+  shy: 3
+  boar: 3
+  octopus: 3
+  tutorial: 1
+  normalKillCount: {fileID: 0}
+  shyKillCount: {fileID: 0}
+  boarKillCount: {fileID: 0}
+  octopusKillCount: {fileID: 0}
+  tutorialKillCount: {fileID: 0}
