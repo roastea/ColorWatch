@@ -24,7 +24,13 @@ public class CountEnemyFromText : MonoBehaviour
     private bool octopusSound = false;
     private bool tutorialSound = false;
 
-    // Update is called once per frame
+    private AudioSource soundReturnColor;
+
+    private void Start()
+    {
+        soundReturnColor = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         normal= normalText.text;
@@ -41,7 +47,31 @@ public class CountEnemyFromText : MonoBehaviour
         if(normal == "Å~0" && normalSound == false)
         {
             normalSound = true;
+            soundReturnColor.PlayOneShot(soundReturnColor.clip);
+        }
 
+        if (shy == "Å~0" && shySound == false)
+        {
+            shySound = true;
+            soundReturnColor.PlayOneShot(soundReturnColor.clip);
+        }
+
+        if (boar == "Å~0" && boarSound == false)
+        {
+            boarSound = true;
+            soundReturnColor.PlayOneShot(soundReturnColor.clip);
+        }
+
+        if (octopus == "Å~0" && octopusSound == false)
+        {
+            octopusSound = true;
+            soundReturnColor.PlayOneShot(soundReturnColor.clip);
+        }
+
+        if (tutorial == "Å~0" && tutorialSound == false)
+        {
+            tutorialSound = true;
+            soundReturnColor.PlayOneShot(soundReturnColor.clip);
         }
     }
 }
