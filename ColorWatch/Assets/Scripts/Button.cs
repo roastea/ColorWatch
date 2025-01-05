@@ -21,7 +21,7 @@ public class Button : MonoBehaviour
 
     public void PushStartGame()
     {
-        SceneManager.LoadScene("meiroScene");
+        SceneManager.LoadScene("VideoScene");
     }
 
     public void PushBackTitle()
