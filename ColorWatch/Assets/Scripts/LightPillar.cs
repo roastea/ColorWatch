@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class LightPillar : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class LightPillar : MonoBehaviour
     public TextMeshProUGUI boarKillCount;
     public TextMeshProUGUI octopusKillCount;
     public TextMeshProUGUI tutorialKillCount;
+
+    //色を取り戻したときのモーション
+    [SerializeField] VideoPlayer returnColorEffect; //柱の色と対応したものを入れる
 
     private void Awake()
     {
@@ -92,6 +96,8 @@ public class LightPillar : MonoBehaviour
             }
             else
             {
+                returnColorEffect.Play(); //エフェクトの再生
+
                 Destroy(this.gameObject);
             }
         }
