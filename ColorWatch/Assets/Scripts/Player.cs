@@ -24,10 +24,12 @@ public class Player : MonoBehaviour
 
     private float nowStamina;
 
-    private bool moving;
+    public bool moving;
+    public bool running;
     private bool looking;
-    private bool running;
     private bool dameged = false;
+    private bool runSE = false;
+    private bool walkSE = false;
 
     private Vector2 moveVector;
     private Vector2 lookVector;
@@ -36,8 +38,11 @@ public class Player : MonoBehaviour
     private Vector3 playerlook;
 
     //Sound
-    AudioSource soundWalk;
-    AudioSource soundRun;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource walkSESource;
+    [SerializeField] AudioSource runSESource;
+
+    [SerializeField] AudioClip soundHit;
 
     //UI
     public GameObject staminaGauge;
@@ -48,9 +53,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
-        //soundWalk = GetComponent<AudioSource>();
-        //soundRun = GetComponent<AudioSource>();
 
         staminaSlider = staminaGauge.GetComponent<Slider>();
         staminaSlider.maxValue = maxStamina;
@@ -97,16 +99,12 @@ public class Player : MonoBehaviour
     {
         if (context.started)
         {
-            //soundRun.Play();
-            //soundWalk.Stop();
             runOnIcon.SetActive(true);
             runOffIcon.SetActive(false);
             running = true;
         }
         else if (context.canceled)
         {
-            //soundRun.Stop();
-            //soundWalk.Play();
             runOnIcon.SetActive(false);
             runOffIcon.SetActive(true);
             running = false;
@@ -121,6 +119,18 @@ public class Player : MonoBehaviour
         {
             if (running) //ダッシュ時
             {
+                if (!runSE) //効果音を鳴らす
+                {
+                    if (walkSE)
+                    {
+                        walkSESource.Stop();
+                        walkSE = false;
+                    }
+
+                    runSESource.Play();
+                    runSE = true;
+                }
+
                 playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed * dashspeed;
 
                 //慣性を消したい
@@ -151,6 +161,18 @@ public class Player : MonoBehaviour
             }
             else //通常時
             {
+                if (!walkSE)
+                {
+                    if (runSE)
+                    {
+                        runSESource.Stop();
+                        runSE = false;
+                    }
+
+                    walkSESource.Play();
+                    walkSE = true;
+                }
+
                 playermove = new Vector3(moveVector.x, 0, moveVector.y) * playerspeed;
 
                 //慣性を消したい
@@ -175,6 +197,11 @@ public class Player : MonoBehaviour
         else
         {
             rb.velocity = Vector3.zero;
+
+            runSESource.Stop();
+            walkSESource.Stop();
+            runSE = false;
+            walkSE = false;
         }
 
         //スタミナの回復
@@ -228,8 +255,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //敵にぶつかった時
         if (other.CompareTag("Enemy") && !dameged)
         {
+            audioSource.PlayOneShot(soundHit); //効果音を鳴らす
+
             playerspeed = 10;
             dameged = true;
             Invoke(nameof(Invincible), 3.0f); //3秒後に無敵状態を戻す
@@ -241,6 +271,15 @@ public class Player : MonoBehaviour
             {
                 SceneManager.LoadScene("GameOverScene");
             }
+        }
+    }
+
+    //物にぶつかったら効果音を鳴らす
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag != "Floor")
+        {
+            audioSource.PlayOneShot(soundHit);
         }
     }
 
