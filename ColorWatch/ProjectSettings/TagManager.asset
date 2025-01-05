@@ -13,6 +13,7 @@ TagManager:
   - Blue
   - BlackLight
   - EnemyShy
+  - Floor
   layers:
   - Default
   - TransparentFX
