@@ -23,7 +23,10 @@ public class BlackLightScript : MonoBehaviour
     public Image BackGroundImage;
 
     //Sound
-    AudioSource soundLight;
+    [SerializeField] AudioSource audioSource;
+
+    [SerializeField] AudioClip soundLight;
+    [SerializeField] AudioClip soundShort;
 
     //UI
     public GameObject lightOnIcon;
@@ -31,7 +34,6 @@ public class BlackLightScript : MonoBehaviour
 
     void Start()
     {
-        soundLight = GetComponent<AudioSource>();
         batterySlider = batteryGauge.GetComponent<Slider>();
         batterySlider.maxValue = maxBattery;
         nowbattery = maxBattery;
@@ -46,14 +48,14 @@ public class BlackLightScript : MonoBehaviour
         {
             if (!powerOn)
             {
-                soundLight.PlayOneShot(soundLight.clip);
+                audioSource.PlayOneShot(soundLight);
                 lightOnIcon.SetActive(true);
                 lightOffIcon.SetActive(false);
                 powerOn = true;
             }
             else
             {
-                soundLight.PlayOneShot(soundLight.clip);
+                audioSource.PlayOneShot(soundLight);
                 lightOnIcon.SetActive(false);
                 lightOffIcon.SetActive(true);
                 powerOn = false;
@@ -86,6 +88,8 @@ public class BlackLightScript : MonoBehaviour
 
                             if(nowbattery <= 0) //バッテリーが無くなったら
                             {
+                                audioSource.PlayOneShot(soundShort); //効果音を鳴らす
+
                                 batteryShort = true; //ショートさせる
                                 powerOn = false; //ライトが切れる
                                 lightOnIcon.SetActive(false);

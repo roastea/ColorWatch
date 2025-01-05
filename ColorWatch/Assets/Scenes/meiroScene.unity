@@ -12878,6 +12878,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2380691546305582548, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
+      propertyPath: soundLight
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ef8b9ddcf13a6949aa8098facf532c3, type: 3}
+    - target: {fileID: 2380691546305582548, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
+      propertyPath: soundShort
+      value: 
+      objectReference: {fileID: 8300000, guid: a88ed2922027de8409234f1f7f502e8c, type: 3}
+    - target: {fileID: 2380691546305582548, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2055649869}
+    - target: {fileID: 2380691546305582548, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
       propertyPath: lightOnIcon
       value: 
       objectReference: {fileID: 558087352}
@@ -12973,6 +12985,10 @@ PrefabInstance:
       propertyPath: damagedlifeArray.Array.data[2]
       value: 
       objectReference: {fileID: 806238421}
+    - target: {fileID: 7010939030395732665, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14249,6 +14265,11 @@ RectTransform:
 --- !u!1 &2055649867 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2549724601137587029, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
+  m_PrefabInstance: {fileID: 1909896833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2055649869 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7010939030395732665, guid: b90eb89a3dda58d4e9d60cf46cc92a5d, type: 3}
   m_PrefabInstance: {fileID: 1909896833}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2061814617
