@@ -44,7 +44,7 @@ public class CountEnemyFromText : MonoBehaviour
             SceneManager.LoadScene("ClearScene");
         }
 
-        if(normal == "Å~0" && normalSound == false)
+        if (normal == "Å~0" && normalSound == false)
         {
             normalSound = true;
             soundReturnColor.PlayOneShot(soundReturnColor.clip);

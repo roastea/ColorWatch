@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProBuilder;
+using UnityEngine.SceneManagement;
 
 public class LightPillarManager : MonoBehaviour
 {
@@ -15,6 +16,15 @@ public class LightPillarManager : MonoBehaviour
     int rnd; //—”‚ğ“ü‚ê‚éintŒ^
 
     List<GameObject> PillarList = new List<GameObject>();
+
+    public List<GameObject> enemyClear = new List<GameObject>();
+    private void Update()
+    {
+        if (enemyClear == null || enemyClear.Count == 0)
+        {
+            SceneManager.LoadScene("ClearScene");
+        }
+    }
 
     void Start()
     {
