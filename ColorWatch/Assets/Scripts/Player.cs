@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioSource runSESource;
 
     [SerializeField] AudioClip soundHit;
+    [SerializeField] AudioClip soundDamege;
 
     //UI
     public GameObject staminaGauge;
@@ -258,7 +259,7 @@ public class Player : MonoBehaviour
         //“G‚É‚Ô‚Â‚©‚Á‚½Žž
         if (other.CompareTag("Enemy") && !dameged)
         {
-            audioSource.PlayOneShot(soundHit); //Œø‰Ê‰¹‚ð–Â‚ç‚·
+            audioSource.PlayOneShot(soundDamege); //Œø‰Ê‰¹‚ð–Â‚ç‚·
 
             playerspeed = 10;
             dameged = true;
