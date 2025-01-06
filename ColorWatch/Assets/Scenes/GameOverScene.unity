@@ -420,7 +420,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0, g: 1, b: 0.0070483685, a: 1}
+    m_SelectedColor: {r: 0.27735847, g: 0.7888525, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fb3357e3b6df5b44bbd16a3d33a3e049, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08e19be9948f2d24584658168e8185da, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -713,7 +713,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0, g: 1, b: 0.17604065, a: 1}
+    m_SelectedColor: {r: 0.2999999, g: 1, b: 0.42352927, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -734,8 +734,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1333766799}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: PushStartGame
+        m_TargetAssemblyTypeName: retryButton, Assembly-CSharp
+        m_MethodName: PushRetryGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 985c6508f88c5014382bc865e3a9ebfe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d19c8956af97f74469198257018ea686, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1333766794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce2a2b417626a3246a33e1d554e18c9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 86a303d439d867b40ad9ed866bbfe69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1433476088
