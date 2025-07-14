@@ -1,4 +1,2 @@
 # ColorWatch
 
-tsts
-alive
